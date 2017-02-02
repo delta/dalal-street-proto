@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package dalalstreet.socketapi.actions;
+
+import "models/MarketEvent.proto";
+import "errors/Errors.proto";
+
+message GetMarketEventsRequest {
+    uint32 last_event_id = 1;
+    uint32 count = 2;
+}
+
+message GetMarketEventsResponse {
+    message GetMarketEventsSuccessResponse {
+        bool more_exists = 1;
+        map<uint32, models.MarketEvent> market_events = 2;
+    } 
+
+    oneof response {
+        GetMarketEventsSuccessResponse result = 1;
+        errors.BadRequestError bad_request_error = 2;
+        errors.InternalServerError internal_server_error = 3;
+    }
+}

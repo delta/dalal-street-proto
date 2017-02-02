@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package dalalstreet.socketapi.actions;
+
+import "models/Ask.proto";
+import "errors/Errors.proto";
+
+message GetMyAsksRequest {
+    uint32 last_ask_id = 1;
+    uint32 count = 2;
+}
+
+message GetMyAsksResponse {
+    message GetMyAsksSuccessResponse {
+        bool more_exists = 1;
+        map<uint32, models.Ask> ask_orders = 2;
+    }
+
+
+    oneof response {
+        GetMyAsksSuccessResponse result = 1;
+        errors.BadRequestError bad_request_error = 2;
+        errors.InternalServerError internal_server_error = 3;
+    }
+}
