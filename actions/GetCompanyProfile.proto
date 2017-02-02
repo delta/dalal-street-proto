@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package dalalstreet.socketapi.actions;
+
+import "models/Stock.proto";
+import "models/StockHistory.proto";
+import "errors/Errors.proto";
+
+message GetCompanyProfileRequest {
+    uint32 stock_id = 1;
+}
+
+message GetCompanyProfileResponse {
+    message GetCompanyProfileSuccessResponse {
+        models.Stock stock_details = 1;
+        map<string, models.StockHistory> stock_history_map = 2;
+    }
+
+    oneof response {
+        GetCompanyProfileSuccessResponse result = 1;
+        errors.BadRequestError bad_request_error = 2;
+        errors.InternalServerError internal_server_error = 3;
+    }
+}
