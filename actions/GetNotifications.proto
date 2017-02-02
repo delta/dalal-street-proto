@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package dalalstreet.socketapi.actions;
+
+import "models/Notification.proto";
+import "errors/Errors.proto";
+
+message GetNotificationsRequest {
+    uint32 last_notification_id = 1;
+    uint32 count = 2;
+}
+
+message GetNotificationsResponse {
+    message GetNotificationsSuccessResponse {
+        bool more_exists = 1;
+        map<uint32, models.Notification> notifications = 2;
+    } 
+
+    oneof response {
+        GetNotificationsSuccessResponse result = 1;
+        errors.BadRequestError bad_request_error = 2;
+        errors.InternalServerError internal_server_error = 3;
+    }
+}
