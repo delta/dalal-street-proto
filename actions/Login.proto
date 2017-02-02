@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package dalalstreet.socketapi.actions;
 
+import "models/Stock.proto";
+import "models/User.proto";
 import "errors/Errors.proto";
 
 message LoginRequest {
@@ -12,6 +14,9 @@ message LoginRequest {
 message LoginResponse {
     message LoginSuccessResponse {
         string session_id = 1;
+        models.User user = 2;
+        map<uint32, int32> stocks_owned = 3;
+        map<uint32, models.Stock> stock_list = 4;
     }
 
     message InvalidCredentialsError {
