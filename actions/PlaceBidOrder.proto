@@ -14,7 +14,7 @@ message PlaceBidOrderRequest {
 
 message PlaceBidOrderResponse {
     message PlaceBidOrderSuccessResponse {
-        uint32 bidId = 1;
+        uint32 bid_id = 1;
     }
 
     message BidLimitExceededError {

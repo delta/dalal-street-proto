@@ -13,7 +13,6 @@ message GetMortgageDetailsResponse {
         message MortgageDetails {
             uint32 stock_id = 1;
             uint32 num_stocks_in_bank = 2;
-            uint32 stocks_left = 3;
         }
 
         map<uint32, MortgageDetails> mortgage_map = 1; // key: stockid, value: the details about this mortgage
