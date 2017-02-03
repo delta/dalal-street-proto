@@ -20,6 +20,8 @@ import "actions/GetMyAsks.proto";
 import "actions/GetMyBids.proto";
 import "actions/GetNotifications.proto";
 import "actions/GetTransactions.proto";
+import "actions/GetMortgageDetails.proto";
+import "actions/GetLeaderboard.proto";
 
 import "datastreams/DataStreamType.proto";
 import "datastreams/MarketDepth.proto";
@@ -34,10 +36,6 @@ message RequestWrapper {
     string session_id = 2;
 
     oneof request {
-/*      
-        getLeaderboard    -> Paginated list of users on leaderboard
-        getMortgageDetails-> List of all stocks currently in mortgage (calculated from transactions)
-*/
 		actions.BuyStocksFromExchangeRequest buy_stocks_from_exchange_request = 3;
 		actions.CancelAskOrderRequest cancel_ask_order_request = 4;
 		actions.CancelBidOrderRequest cancel_bid_order_request = 5;
@@ -50,12 +48,14 @@ message RequestWrapper {
 		actions.SubscribeRequest subscribe_request = 12;
 		actions.UnsubscribeRequest unsubscribe_request = 13;
 
-        actions.GetCompanyProfileRequest get_company_profile_request = 14;
-        actions.GetMarketEventsRequest get_market_events_request = 15;
-        actions.GetMyAsksRequest get_my_asks_request = 16;
-        actions.GetMyBidsRequest get_my_bids_request = 17;
-        actions.GetNotificationsRequest get_notifications_request = 18;
-        actions.GetTransactionsRequest get_transactions_request = 19;
+		actions.GetCompanyProfileRequest get_company_profile_request = 14;
+		actions.GetMarketEventsRequest get_market_events_request = 15;
+		actions.GetMyAsksRequest get_my_asks_request = 16;
+		actions.GetMyBidsRequest get_my_bids_request = 17;
+		actions.GetNotificationsRequest get_notifications_request = 18;
+		actions.GetTransactionsRequest get_transactions_request = 19;
+		actions.GetMortgageDetailsRequest get_mortgage_details_request = 20;
+		actions.GetLeaderboardRequest get_leaderboard_request = 21;
     }
 }
 
@@ -75,13 +75,15 @@ message ResponseWrapper {
 		actions.SubscribeResponse subscribe_response = 12;
 		actions.UnsubscribeResponse unsubscribe_response = 13;
 
-        actions.GetCompanyProfileResponse get_company_profile_response = 14;
-        actions.GetMarketEventsResponse get_market_events_response = 15;
-        actions.GetMyAsksResponse get_my_asks_response = 16;
-        actions.GetMyBidsResponse get_my_bids_response = 17;
-        actions.GetNotificationsResponse get_notifications_response = 18;
-        actions.GetTransactionsResponse get_transactions_response = 19;
-    }
+		actions.GetCompanyProfileResponse get_company_profile_response = 14;
+		actions.GetMarketEventsResponse get_market_events_response = 15;
+		actions.GetMyAsksResponse get_my_asks_response = 16;
+		actions.GetMyBidsResponse get_my_bids_response = 17;
+		actions.GetNotificationsResponse get_notifications_response = 18;
+		actions.GetTransactionsResponse get_transactions_response = 19;
+		actions.GetMortgageDetailsResponse get_mortgage_details_response = 20;
+		actions.GetLeaderboardResponse get_leaderboard_response = 21;
+	}
 }
 
 message DataStreamUpdateWrapper {

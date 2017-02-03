@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package dalalstreet.socketapi.actions;
+
+import "errors/Errors.proto";
+
+message GetLeaderboardRequest {
+    uint32 page = 1;
+}
+
+message GetLeaderboardResponse {
+    message GetLeaderboardSuccessResponse {
+        uint32 my_rank = 1;
+        uint32 total_users = 2;
+        uint32 total_pages = 3;
+        map<uint32, uint32> rank_list = 4;  // key: userid, value: rank
+        uint32 updated_before = 5;          // Number of seconds before which the leaderboard was updated
+        uint32 next_update_after = 6;       // Number of seconds after which the next update will be made
+    }
+
+    oneof response {
+        GetLeaderboardSuccessResponse result = 1;
+        errors.BadRequestError bad_request_error = 2;
+        errors.InternalServerError internal_server_error = 3;
+    }
+}
