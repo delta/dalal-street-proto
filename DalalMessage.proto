@@ -14,6 +14,13 @@ import "actions/RetrieveMortgageStocks.proto";
 import "actions/Subscribe.proto";
 import "actions/Unsubscribe.proto";
 
+import "actions/GetCompanyProfile.proto";
+import "actions/GetMarketEvents.proto";
+import "actions/GetMyAsks.proto";
+import "actions/GetMyBids.proto";
+import "actions/GetNotifications.proto";
+import "actions/GetTransactions.proto";
+
 import "datastreams/DataStreamType.proto";
 import "datastreams/MarketDepth.proto";
 import "datastreams/Transactions.proto";
@@ -28,14 +35,6 @@ message RequestWrapper {
 
     oneof request {
 /*      
-        LoginResponse should return:
-            user's name, cash, stocks currently owned, total worth, and list of all stocks (name, price, stats)
-
-        getMyOrders       -> list of asks and bids made by the user, including the orderfills. Must be paginated.
-        getMarketEvents   -> Paginated list of market events
-        getNotifications  -> Paginated list of notifications
-        getTransactions   -> Paginated list of transactions
-        getCompanyProfile -> stock history of the company and company details
         getLeaderboard    -> Paginated list of users on leaderboard
         getMortgageDetails-> List of all stocks currently in mortgage (calculated from transactions)
 */
@@ -50,6 +49,13 @@ message RequestWrapper {
 		actions.RetrieveMortgageStocksRequest retrieve_mortgage_stocks_request = 11;
 		actions.SubscribeRequest subscribe_request = 12;
 		actions.UnsubscribeRequest unsubscribe_request = 13;
+
+        actions.GetCompanyProfileRequest get_company_profile_request = 14;
+        actions.GetMarketEventsRequest get_market_events_request = 15;
+        actions.GetMyAsksRequest get_my_asks_request = 16;
+        actions.GetMyBidsRequest get_my_bids_request = 17;
+        actions.GetNotificationsRequest get_notifications_request = 18;
+        actions.GetTransactionsRequest get_transactions_request = 19;
     }
 }
 
@@ -68,6 +74,13 @@ message ResponseWrapper {
 		actions.RetrieveMortgageStocksResponse retrieve_mortgage_stocks_response = 11;
 		actions.SubscribeResponse subscribe_response = 12;
 		actions.UnsubscribeResponse unsubscribe_response = 13;
+
+        actions.GetCompanyProfileResponse get_company_profile_response = 14;
+        actions.GetMarketEventsResponse get_market_events_response = 15;
+        actions.GetMyAsksResponse get_my_asks_response = 16;
+        actions.GetMyBidsResponse get_my_bids_response = 17;
+        actions.GetNotificationsResponse get_notifications_response = 18;
+        actions.GetTransactionsResponse get_transactions_response = 19;
     }
 }
 
