@@ -3,10 +3,11 @@ syntax = "proto3";
 package dalalstreet.socketapi.models;
 
 message LeaderboardRow {
-    uint32 user_id = 1;
-    uint32 rank = 2;
-    uint32 cash = 3;
-    uint32 debt = 4;
-    int32  stock_worth = 5;
-    int32  total_worth = 6;
+    uint32 id = 1;
+    uint32 user_id = 2;
+    uint32 rank = 3;
+    uint32 cash = 4;
+    uint32 debt = 5;
+    int32  stock_worth = 6;
+    int32  total_worth = 7;
 }
