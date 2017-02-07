@@ -13,6 +13,7 @@ message GetTransactionsRequest {
 message GetTransactionsResponse {
     message GetTransactionsSuccessResponse {
         map<uint32, models.Transaction> transactions_map = 1;
+        bool more_exists = 2;
     }
 
     oneof response {
