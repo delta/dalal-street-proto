@@ -13,7 +13,8 @@ message GetMyAsksRequest {
 message GetMyAsksResponse {
     message GetMyAsksSuccessResponse {
         bool more_exists = 1;
-        map<uint32, models.Ask> ask_orders = 2;
+        map<uint32, models.Ask> open_ask_orders = 3;
+        map<uint32, models.Ask> closed_ask_orders = 2;
     }
 
 
