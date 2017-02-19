@@ -12,6 +12,7 @@ message BuyStocksFromExchangeRequest {
 message BuyStocksFromExchangeResponse {
     message BuyStocksFromExchangeSuccessResponse {
         uint32 trading_price = 1;   //price of stocks when the server processed the request
+        int32 stock_quantity = 2;
     }
 
     message NotEnoughCashError {
