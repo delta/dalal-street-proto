@@ -4,7 +4,8 @@ package dalalstreet.socketapi.datastreams;
 
 message StockExchangeDataPoint {
     uint32 price = 1;
-    uint32 stock_count = 2;
+    uint32 stocks_in_exchange = 2;
+    uint32 stocks_in_market = 3;
 }
 
 message StockExchangeUpdate {
