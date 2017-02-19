@@ -17,6 +17,7 @@ message LoginResponse {
         models.User user = 2;
         map<uint32, int32> stocks_owned = 3;
         map<uint32, models.Stock> stock_list = 4;
+        map<string, int32> constants = 5;
     }
 
     message InvalidCredentialsError {
