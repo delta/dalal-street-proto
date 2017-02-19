@@ -23,11 +23,16 @@ message BuyStocksFromExchangeResponse {
         string reason = 1;
     }
 
+    message NotEnoughStocksError {
+        string reason = 1;
+    }
+
     oneof response {
         BuyStocksFromExchangeSuccessResponse result = 1;
         NotEnoughCashError not_enough_cash_error = 2;
         BuyLimitExceededError buy_limit_exceeded_error = 3;
         errors.BadRequestError bad_request_error = 4;
         errors.InternalServerError internal_server_error = 5;
+        NotEnoughStocksError not_enough_stocks_error = 6;
     }
 }
