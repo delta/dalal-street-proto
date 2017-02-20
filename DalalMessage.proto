@@ -30,6 +30,7 @@ import "datastreams/Notifications.proto";
 import "datastreams/StockPrices.proto";
 import "datastreams/StockExchange.proto";
 import "datastreams/MarketEvents.proto";
+import "datastreams/MyOrders.proto";
 
 message RequestWrapper {
     string request_id = 1;
@@ -97,6 +98,7 @@ message DataStreamUpdateWrapper {
         datastreams.StockPricesUpdate stock_prices_update = 6;
         datastreams.MarketEventUpdate market_events_update = 7;
         datastreams.StockExchangeUpdate stock_exchange_update = 8;
+        datastreams.MyOrderUpdate my_order_update = 9;
     }
 }
 

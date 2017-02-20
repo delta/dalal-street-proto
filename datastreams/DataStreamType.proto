@@ -9,4 +9,5 @@ enum DataStreamType {
     STOCK_PRICES = 3;
     STOCK_EXCHANGE = 4;
     MARKET_EVENTS = 5;
+    MY_ORDERS = 6;
 }
