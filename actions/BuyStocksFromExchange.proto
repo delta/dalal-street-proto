@@ -2,6 +2,7 @@ syntax = "proto3";
 
 package dalalstreet.socketapi.actions;
 
+import "models/Transaction.proto";
 import "errors/Errors.proto";
 
 message BuyStocksFromExchangeRequest {
@@ -11,8 +12,9 @@ message BuyStocksFromExchangeRequest {
 
 message BuyStocksFromExchangeResponse {
     message BuyStocksFromExchangeSuccessResponse {
-        uint32 trading_price = 1;   //price of stocks when the server processed the request
-        int32 stock_quantity = 2;
+        //uint32 trading_price = 1;   //price of stocks when the server processed the request
+        //int32 stock_quantity = 2;
+        models.Transaction transaction = 3;
     }
 
     message NotEnoughCashError {
