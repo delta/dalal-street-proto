@@ -5,7 +5,8 @@ package dalalstreet.socketapi.models;
 message MarketEvent {
     uint32 id = 1;
     uint32 stock_id = 2;
-    string text = 3;
-    sint32 emotion_score = 4;
-    string created_at = 5;
+    string headline = 3;
+    string text = 4;
+    sint32 emotion_score = 5;
+    string created_at = 6;
 }
