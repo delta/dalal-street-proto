@@ -6,4 +6,5 @@ enum OrderType {
     LIMIT = 0;
     MARKET = 1;
     STOPLOSS = 2;
+    STOPLOSSACTIVE = 3;
 }
