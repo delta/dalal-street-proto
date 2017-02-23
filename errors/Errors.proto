@@ -9,3 +9,6 @@ message BadRequestError {
 message InternalServerError {
     string reason = 1;
 }
+
+message MarketClosedError {
+}

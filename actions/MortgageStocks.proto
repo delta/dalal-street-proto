@@ -26,5 +26,6 @@ message MortgageStocksResponse {
         NotEnoughStocksError not_enough_stocks_error = 2;
         errors.BadRequestError bad_request_error = 3;
         errors.InternalServerError internal_server_error = 4;
+        errors.MarketClosedError market_closed_error = 5;
     }
 }

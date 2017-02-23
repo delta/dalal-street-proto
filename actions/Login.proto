@@ -18,6 +18,9 @@ message LoginResponse {
         map<uint32, int32> stocks_owned = 3;
         map<uint32, models.Stock> stock_list = 4;
         map<string, int32> constants = 5;
+        string market_is_open_hacky_notif = 6;
+        string market_is_closed_hacky_notif = 7;
+        bool is_market_open = 8;
     }
 
     message InvalidCredentialsError {

@@ -31,5 +31,6 @@ message PlaceAskOrderResponse {
         NotEnoughStocksError not_enough_stocks_error = 3;
         errors.BadRequestError bad_request_error = 4;
         errors.InternalServerError internal_server_error = 5;
+        errors.MarketClosedError market_closed_error = 6;
     }
 }
