@@ -16,6 +16,7 @@ message Stock {
   uint32 stocks_in_market = 11;
   bool up_or_down = 12;
   uint32 previous_day_close = 13;
-  string created_at = 14;
-  string updated_at = 15;
+  uint32 avg_last_price = 14;
+  string created_at = 15;
+  string updated_at = 16;
 }
