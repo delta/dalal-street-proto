@@ -103,3 +103,43 @@ message DalalMessage {
         DataStreamUpdateWrapper data_stream_update_wrapper = 3;
     }
 }
+
+
+service DalalService {
+	// Stock trading related functions
+    rpc BuyStocksFromExchange(actions.BuyStocksFromExchangeRequest) 	returns (actions.BuyStocksFromExchangeResponse);
+    rpc PlaceOrder(actions.PlaceOrderRequest) 							returns (actions.PlaceOrderResponse);
+	rpc CancelOrder(actions.CancelOrderRequest) 						returns (actions.CancelOrderResponse);
+	rpc MortgageStocks(actions.MortgageStocksRequest) 					returns (actions.MortgageStocksResponse);
+	rpc RetrieveMortgageStocks(actions.RetrieveMortgageStocksRequest) 	returns (actions.RetrieveMortgageStocksResponse);
+
+	// Getting information about transactions, orders, mortgage
+	rpc GetMyOpenOrders(actions.GetMyOpenOrdersRequest)					returns (actions.GetMyOpenOrdersResponse);
+	rpc GetMyClosedAsks(actions.GetMyClosedAsksRequest)					returns (actions.GetMyClosedAsksResponse);
+	rpc GetMyClosedBids(actions.GetMyClosedBidsRequest)					returns (actions.GetMyClosedBidsResponse);
+	rpc GetTransactions(actions.GetTransactionsRequest)   				returns (actions.GetTransactionsResponse);
+	rpc GetMortgageDetails(actions.GetMortgageDetailsRequest) 			returns (actions.GetMortgageDetailsResponse);
+
+	// Getting general information
+	rpc GetCompanyProfile(actions.GetCompanyProfileRequest)				returns (actions.GetCompanyProfileResponse);
+	rpc GetLeaderboard(actions.GetLeaderboardRequest)					returns (actions.GetLeaderboardResponse);
+	rpc GetMarketEvents(actions.GetMarketEventsRequest)     			returns (actions.GetMarketEventsResponse);
+	rpc GetNotifications(actions.GetNotificationsRequest)   			returns (actions.GetNotificationsResponse);
+
+	// Auth
+	rpc Login(actions.LoginRequest) 									returns (actions.LoginResponse);
+	rpc Logout(actions.LogoutRequest) 									returns (actions.LogoutResponse);
+
+	// Subscription
+	rpc Subscribe(actions.SubscribeRequest) 							returns (actions.SubscribeResponse);
+	rpc Unsubscribe(actions.UnsubscribeRequest) 						returns (actions.UnsubscribeResponse);
+
+	// Datastreams
+	rpc getMarketDepthUpdates(actions.SubscriptionId)	returns (stream datastreams.MarketDepthUpdate);
+	rpc getMarketEventUpdates(actions.SubscriptionId)	returns (stream datastreams.MarketEventUpdate);
+	rpc getMyOrderUpdates(actions.SubscriptionId)		returns (stream datastreams.MyOrderUpdate);
+	rpc getNotificationUpdates(actions.SubscriptionId)	returns (stream datastreams.NotificationUpdate);
+	rpc getStockExchangeUpdates(actions.SubscriptionId)	returns (stream datastreams.StockExchangeUpdate);
+	rpc getStockPricesUpdates(actions.SubscriptionId)	returns (stream datastreams.StockPricesUpdate);
+	rpc getTransactionUpdates(actions.SubscriptionId)	returns (stream datastreams.TransactionUpdate);
+}
