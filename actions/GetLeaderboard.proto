@@ -1,9 +1,7 @@
 syntax = "proto3";
-
 package dalalstreet.socketapi.actions;
 
 import "models/LeaderboardRow.proto";
-import "errors/Errors.proto";
 
 message GetLeaderboardRequest {
     uint32 starting_id = 1;
@@ -11,15 +9,14 @@ message GetLeaderboardRequest {
 }
 
 message GetLeaderboardResponse {
-    message GetLeaderboardSuccessResponse {
-        uint32 my_rank = 1;
-        uint32 total_users = 2;
-        map<uint32, models.LeaderboardRow> rank_list = 4;  // key: rank, value: leaderboard row
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
     }
+    StatusCode status_code = 1;
+    string     status_message = 2;
 
-    oneof response {
-        GetLeaderboardSuccessResponse result = 1;
-        errors.BadRequestError bad_request_error = 2;
-        errors.InternalServerError internal_server_error = 3;
-    }
+    uint32 my_rank = 3;
+    uint32 total_users = 4;
+    repeated models.LeaderboardRow rank_list = 5;  // key: rank, value: leaderboard row
 }

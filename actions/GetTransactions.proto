@@ -1,9 +1,7 @@
 syntax = "proto3";
-
 package dalalstreet.socketapi.actions;
 
 import "models/Transaction.proto";
-import "errors/Errors.proto";
 
 message GetTransactionsRequest {
     uint32 last_transaction_id = 1; // 0 for latest transactions
@@ -11,14 +9,13 @@ message GetTransactionsRequest {
 }
 
 message GetTransactionsResponse {
-    message GetTransactionsSuccessResponse {
-        map<uint32, models.Transaction> transactions_map = 1;
-        bool more_exists = 2;
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
     }
+    StatusCode status_code = 1;
+    string     status_message = 2;
 
-    oneof response {
-        GetTransactionsSuccessResponse result = 1;
-        errors.BadRequestError bad_request_error = 2;
-        errors.InternalServerError internal_server_error = 3;
-    }
+    bool more_exists = 3;
+    repeated models.Transaction transactions = 4;
 }

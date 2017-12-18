@@ -1,9 +1,7 @@
 syntax = "proto3";
-
 package dalalstreet.socketapi.actions;
 
 import "models/Transaction.proto";
-import "errors/Errors.proto";
 
 message MortgageStocksRequest {
     uint32 stock_id = 1;
@@ -11,21 +9,15 @@ message MortgageStocksRequest {
 }
 
 message MortgageStocksResponse {
-    message MortgageStocksSuccessResponse {
-        //bool success = 1;
-        //uint32 trading_price = 2;   //price of stocks that the bank paid the user
-        models.Transaction transaction = 3;
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+        MarketClosedError = 2;
+        InvalidStockIdError = 3;
+        NotEnoughStocksError = 4;
     }
+    StatusCode status_code = 1;
+    string     status_message = 2;
 
-    message NotEnoughStocksError {
-        string reason = 1;
-    }
-
-    oneof response {
-        MortgageStocksSuccessResponse result = 1;
-        NotEnoughStocksError not_enough_stocks_error = 2;
-        errors.BadRequestError bad_request_error = 3;
-        errors.InternalServerError internal_server_error = 4;
-        errors.MarketClosedError market_closed_error = 5;
-    }
+    models.Transaction transaction = 3;
 }
