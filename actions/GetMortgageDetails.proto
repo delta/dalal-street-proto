@@ -1,5 +1,5 @@
 syntax = "proto3";
-package dalalstreet.socketapi.actions;
+package dalalstreet.api.actions;
 
 message GetMortgageDetailsRequest {
 //    Yeah. Empty. No parameters required here.

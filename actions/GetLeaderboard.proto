@@ -1,5 +1,5 @@
 syntax = "proto3";
-package dalalstreet.socketapi.actions;
+package dalalstreet.api.actions;
 
 import "models/LeaderboardRow.proto";
 

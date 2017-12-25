@@ -1,5 +1,5 @@
 syntax = "proto3";
-package dalalstreet.socketapi.datastreams;
+package dalalstreet.api.datastreams;
 
 import "datastreams/DataStreamType.proto";
 

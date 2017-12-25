@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package dalalstreet.socketapi.datastreams;
+package dalalstreet.api.datastreams;
 
 message MyOrderUpdate {
     uint32 id = 1;
