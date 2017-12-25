@@ -27,7 +27,7 @@ import "datastreams/StockPrices.proto";
 import "datastreams/StockExchange.proto";
 import "datastreams/MarketEvents.proto";
 import "datastreams/MyOrders.proto";
-
+/*
 message RequestWrapper {
     string request_id = 1;
     string session_id = 2;
@@ -103,6 +103,7 @@ message DalalMessage {
         DataStreamUpdateWrapper data_stream_update_wrapper = 3;
     }
 }
+*/
 
 service DalalActionService {
 	// Stock trading related functions
