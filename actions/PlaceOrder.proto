@@ -4,7 +4,7 @@ package dalalstreet.socketapi.actions;
 import "models/OrderType.proto";
 
 message PlaceOrderRequest {
-    uint32 is_ask = 1;
+    bool   is_ask = 1;
     uint32 stock_id = 2;
     models.OrderType order_type = 3;
     uint32 price = 4;
