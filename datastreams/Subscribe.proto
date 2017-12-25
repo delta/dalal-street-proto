@@ -1,7 +1,15 @@
 syntax = "proto3";
 package dalalstreet.api.datastreams;
 
-import "datastreams/DataStreamType.proto";
+enum DataStreamType {
+    MARKET_DEPTH = 0;
+    TRANSACTIONS = 1;
+    NOTIFICATIONS = 2;
+    STOCK_PRICES = 3;
+    STOCK_EXCHANGE = 4;
+    MARKET_EVENTS = 5;
+    MY_ORDERS = 6;
+}
 
 message SubscriptionId {
     string id = 1;

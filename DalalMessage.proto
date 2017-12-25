@@ -19,7 +19,6 @@ import "actions/GetMortgageDetails.proto";
 import "actions/GetLeaderboard.proto";
 
 import "datastreams/Subscribe.proto";
-import "datastreams/DataStreamType.proto";
 import "datastreams/MarketDepth.proto";
 import "datastreams/Transactions.proto";
 import "datastreams/Notifications.proto";
