@@ -10,13 +10,13 @@
 # You may run this manually to test before pushing.
 
 rm -rf proto_build/
-mkdir -p proto_build/ &&
-cp -r actions/ datastreams/ models/ DalalMessage.proto proto_build/ &&
-cd proto_build/ &&
-protoc --go_out=import_prefix=github.com/thakkarparth007/dalal-street-proto/proto_build/,import_path=socketapi:. *.proto &&
-protoc --go_out=import_prefix=github.com/thakkarparth007/dalal-street-proto/proto_build/,import_path=socketapi/actions:. actions/*.proto &&
-protoc --go_out=import_prefix=github.com/thakkarparth007/dalal-street-proto/proto_build/,import_path=socketapi/models:. models/*.proto &&
-protoc --go_out=import_prefix=github.com/thakkarparth007/dalal-street-proto/proto_build/,import_path=socketapi/datastreams:. datastreams/*.proto &&
-grep -rl "github.com/golang/protobuf/proto" . | grep -v ".sh" | xargs sed -i 's|github.com/thakkarparth007/dalal-street-proto/proto_build/github.com/golang/protobuf/proto|github.com/golang/protobuf/proto|g' &&
-find -type f -name "*.proto" -exec rm {} \; &&
+mkdir -p proto_build/
+cp -r actions/ datastreams/ models/ DalalMessage.proto proto_build/
+cd proto_build/
+protoc --go_out=import_prefix=github.com/thakkarparth007/dalal-street-proto/proto_build/,import_path=pb:. *.proto
+protoc --go_out=import_prefix=github.com/thakkarparth007/dalal-street-proto/proto_build/,import_path=actions_pb:. actions/*.proto
+protoc --go_out=import_prefix=github.com/thakkarparth007/dalal-street-proto/proto_build/,import_path=models_pb:. models/*.proto
+protoc --go_out=import_prefix=github.com/thakkarparth007/dalal-street-proto/proto_build/,import_path=datastreams_pb:. datastreams/*.proto
+grep -rl "proto_build" . | grep -v ".sh" | xargs sed -r -i 's|github.com/thakkarparth007/dalal-street-proto/proto_build/(google\|golang\|github)|\1|g'
+find -type f -name "*.proto" -exec rm {} \;
 go build
