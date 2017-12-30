@@ -23,6 +23,7 @@ message GetMyOpenOrdersResponse {
 // GetMyClosedAsks
 message GetMyClosedAsksRequest {
     uint32 last_order_id = 1;
+    uint32 count = 2;
 }
 message GetMyClosedAsksResponse {
     enum StatusCode {
@@ -40,6 +41,7 @@ message GetMyClosedAsksResponse {
 // GetMyClosedBids
 message GetMyClosedBidsRequest {
     uint32 last_order_id = 1;
+    uint32 count = 2;
 }
 message GetMyClosedBidsResponse {
     enum StatusCode {
@@ -51,5 +53,5 @@ message GetMyClosedBidsResponse {
     string     status_message = 2;
 
     bool                more_exists = 3;
-    repeated models.Ask closed_bid_orders = 4;
+    repeated models.Bid closed_bid_orders = 4;
 }
