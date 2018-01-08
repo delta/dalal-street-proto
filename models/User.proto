@@ -9,4 +9,5 @@ message User {
   uint32 cash = 4;
   int32 total = 5;
   string created_at = 6;
+  bool is_human=7;
 }
