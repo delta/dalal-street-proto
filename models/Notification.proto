@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package dalalstreet.api.models;
 
+option java_multiple_files=true;
+
 message Notification {
   uint32 id = 1;
   uint32 user_id = 2;

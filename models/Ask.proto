@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package dalalstreet.api.models;
 
+option java_multiple_files=true;
+
 import "models/OrderType.proto";
 
 message Ask {
