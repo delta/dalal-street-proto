@@ -13,4 +13,5 @@ message MyOrderUpdate {
     uint32 stock_id = 6;
     uint32 order_price = 7;
     models.OrderType order_type = 8;
+    uint32 stock_quantity = 9;
 }
