@@ -2,9 +2,15 @@ syntax = "proto3";
 
 package dalalstreet.api.datastreams;
 
+import "models/OrderType.proto";
+
 message MyOrderUpdate {
     uint32 id = 1;
     bool   is_ask = 2;
     uint32 trade_quantity = 3;
     bool   is_closed = 4;
+    bool   is_new_order = 5;
+    uint32 stock_id = 6;
+    uint32 order_price = 7;
+    models.OrderType order_type = 8;
 }
