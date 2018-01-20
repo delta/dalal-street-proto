@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package dalalstreet.api.datastreams;
+
+import "models/StockHistory.proto";
+
+message StockHistoryUpdate {
+    models.StockHistory stock_history = 1;
+}
