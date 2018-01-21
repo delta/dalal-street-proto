@@ -10,4 +10,5 @@ message StockHistory {
   uint32 open = 5;
   uint32 high = 6;
   uint32 low = 7;
+  uint32 volume = 8;
 }
