@@ -5,11 +5,11 @@ import "models/StockHistory.proto";
 
 enum StockHistoryResolution {
     OneMinute = 0;       // Range will be 60*Resolution
-    FiveMinutes = 1;    // Range will be 60*Resolution
-    TenMinutes = 2;      // Range will be 60*Resolution
-    ThirtyMinutes = 3;     // Range will be 60*Resolution
-    SixtyMinutes = 4;  // Range will be 60*Resolution
-    OneDay = 5;    // Range will be 60*Resolution
+    FiveMinutes = 1;     // Range will be 60*Resolution
+    FifteenMinutes = 2;  // Range will be 60*Resolution
+    ThirtyMinutes = 3;   // Range will be 60*Resolution
+    SixtyMinutes = 4;    // Range will be 60*Resolution
+    OneDay = 5;          // Range will be 60*Resolution
 };
 
 message GetStockHistoryRequest {
