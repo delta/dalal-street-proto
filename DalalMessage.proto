@@ -20,6 +20,7 @@ import "actions/GetTransactions.proto";
 import "actions/GetMortgageDetails.proto";
 import "actions/GetLeaderboard.proto";
 import "actions/GetStockHistory.proto";
+import "actions/Register.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -81,6 +82,7 @@ message ResponseWrapper {
 		actions.GetTransactionsResponse get_transactions_response = 20;
 		actions.GetMortgageDetailsResponse get_mortgage_details_response = 21;
 		actions.GetLeaderboardResponse get_leaderboard_response = 22;
+		actions.RegisterResponse register_response = 23;
 	}
 }
 
@@ -133,6 +135,7 @@ service DalalActionService {
 	// Auth
 	rpc Login(actions.LoginRequest) 									returns (actions.LoginResponse);
 	rpc Logout(actions.LogoutRequest) 									returns (actions.LogoutResponse);
+	rpc Register(actions.RegisterRequest)								returns (actions.RegisterResponse);
 
 	//Bots
 	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
