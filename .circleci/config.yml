@@ -1,0 +1,20 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.7
+    working_directory: /go/src/github.com/delta/dalal-street-proto
+
+    steps:
+      - checkout
+
+      - run:
+          name: Setup protobuf
+          command: |
+            wget -q https://github.com/google/protobuf/releases/download/v3.2.0rc2/protoc-3.2.0rc2-linux-x86_64.zip
+            unzip -qq protoc-3.2.0rc2-linux-x86_64.zip
+            go get -u -v github.com/golang/protobuf/{proto,protoc-gen-go}
+
+      - run:
+          name: Run protobuf tests
+          command: ./proto-test.sh
