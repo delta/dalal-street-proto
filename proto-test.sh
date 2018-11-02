@@ -2,14 +2,13 @@
 
 # Author: Parth Thakkar (github.com/thakkarparth007)
 #
-# This script is used by travis-ci for building the proto files
+# This script is used by CirclCI for building the proto files
 # into Go packages. If this works well, we know that the proto
 # files do not have compile-time errors, and the output
 # is buildable in Go.
 
 # You may run this manually to test before pushing.
 
-export PATH=$PATH:$(pwd)/bin
 rm -rf proto_build/
 mkdir -p proto_build/
 cp -r actions/ datastreams/ models/ DalalMessage.proto proto_build/
