@@ -17,4 +17,6 @@ jobs:
 
       - run:
           name: Run protobuf tests
-          command: ./proto-test.sh
+          command: |
+            export PATH=$PATH:$(pwd)/bin
+            ./proto-test.sh
