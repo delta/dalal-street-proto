@@ -11,7 +11,7 @@ message MyOrderUpdate {
     bool   is_closed = 4;
     bool   is_new_order = 5;
     uint32 stock_id = 6;
-    uint32 order_price = 7;
+    uint64 order_price = 7;
     models.OrderType order_type = 8;
     uint32 stock_quantity = 9;
 }
