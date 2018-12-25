@@ -22,7 +22,7 @@ message LoginResponse {
     string      session_id = 3;
     models.User user = 4;
 
-    map<uint32, int32>          stocks_owned = 5;
+    map<uint32, int64>          stocks_owned = 5;
     map<uint32, models.Stock>   stock_list = 6;
     map<string, int32>          constants = 7;
 

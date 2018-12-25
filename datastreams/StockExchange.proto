@@ -4,8 +4,8 @@ package dalalstreet.api.datastreams;
 
 message StockExchangeDataPoint {
     uint64 price = 1;
-    uint32 stocks_in_exchange = 2;
-    uint32 stocks_in_market = 3;
+    uint64 stocks_in_exchange = 2;
+    uint64 stocks_in_market = 3;
 }
 
 message StockExchangeUpdate {
