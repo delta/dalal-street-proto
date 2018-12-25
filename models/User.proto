@@ -7,7 +7,7 @@ message User {
   string email = 2;
   string name = 3;
   uint64 cash = 4;
-  int32 total = 5;
+  int64 total = 5;
   string created_at = 6;
   bool is_human=7;
 }

@@ -10,8 +10,8 @@ message Ask {
   uint32 stock_id = 3;
   uint64 price = 4;
   OrderType order_type = 5;
-  uint32 stock_quantity = 6;
-  uint32 stock_quantity_fulfilled = 7;
+  uint64 stock_quantity = 6;
+  uint64 stock_quantity_fulfilled = 7;
   bool is_closed = 8;
   string created_at = 9;
   string updated_at = 10;

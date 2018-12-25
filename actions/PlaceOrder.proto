@@ -8,7 +8,7 @@ message PlaceOrderRequest {
     uint32 stock_id = 2;
     models.OrderType order_type = 3;
     uint64 price = 4;
-    uint32 stock_quantity = 5;
+    uint64 stock_quantity = 5;
 }
 
 message PlaceOrderResponse {
