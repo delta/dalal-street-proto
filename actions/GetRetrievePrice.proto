@@ -1,0 +1,17 @@
+syntax = "proto3";
+package dalalstreet.api.actions;
+
+message GetRetrievePriceRequest {
+    uint32 stock_id = 1;
+    uint64 stock_quantity = 2;
+}
+
+message GetRetrievePriceResponse {
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+    }
+
+    StatusCode status_code = 1;
+    uint64 retrieval_cost = 2;
+}

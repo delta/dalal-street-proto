@@ -21,6 +21,7 @@ import "actions/GetMortgageDetails.proto";
 import "actions/GetLeaderboard.proto";
 import "actions/GetStockHistory.proto";
 import "actions/Register.proto";
+import "actions/GetRetrievePrice.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -124,6 +125,7 @@ service DalalActionService {
 	rpc GetMyClosedBids(actions.GetMyClosedBidsRequest)					returns (actions.GetMyClosedBidsResponse);
 	rpc GetTransactions(actions.GetTransactionsRequest)   				returns (actions.GetTransactionsResponse);
 	rpc GetMortgageDetails(actions.GetMortgageDetailsRequest) 			returns (actions.GetMortgageDetailsResponse);
+	rpc GetRetrievePrice(actions.GetRetrievePriceRequest)				returns (actions.GetRetrievePriceResponse);
 
 	// Getting general information
 	rpc GetCompanyProfile(actions.GetCompanyProfileRequest)				returns (actions.GetCompanyProfileResponse);
