@@ -1,6 +1,8 @@
 syntax = "proto3";
 package dalalstreet.api.actions;
 
+import "models/MortgageDetail.proto";
+
 message GetMortgageDetailsRequest {
 //    Yeah. Empty. No parameters required here.
 }
@@ -12,7 +14,5 @@ message GetMortgageDetailsResponse {
     }
     StatusCode status_code = 1;
     string     status_message = 2;
-
-    // This will be updated when interest-based mortgage is implemented.
-    map<uint32, uint64> mortgage_map = 3; // key: stockid, value: number of stocks in mortgage
+    repeated models.MortgageDetail mortgage_details = 3;
 }
