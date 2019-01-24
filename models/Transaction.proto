@@ -8,6 +8,7 @@ enum TransactionType {
     MORTGAGE_TRANSACTION = 2;
     DIVIDEND_TRANSACTION = 3;
     ORDER_FEE_TRANSACTION = 4;
+    TAX_TRANSACTION = 5;
 }
 
 message Transaction {
