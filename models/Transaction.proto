@@ -9,6 +9,8 @@ enum TransactionType {
     DIVIDEND_TRANSACTION = 3;
     ORDER_FEE_TRANSACTION = 4;
     TAX_TRANSACTION = 5;
+    PLACE_ORDER_TRANSACTION = 6;
+    CANCEL_ORDER_TRANSACTION = 7;
 }
 
 message Transaction {
