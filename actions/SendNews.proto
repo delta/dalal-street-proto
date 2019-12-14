@@ -1,0 +1,13 @@
+syntax = "proto3";
+package dalalstreet.api.actions;
+
+message SendNewsRequest {
+    string news = 1;
+}
+message SendNewsResponse {
+    enum StatusCode {
+        OK = 0;
+    }
+    StatusCode status_code = 1;
+    string status_message = 2;
+}
