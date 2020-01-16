@@ -10,7 +10,6 @@ import "actions/MortgageStocks.proto";
 import "actions/PlaceOrder.proto";
 import "actions/RetrieveMortgageStocks.proto";
 import "actions/SendNews.proto";
-import "actions/SendDividends.proto";
 
 import "actions/GetPortfolio.proto";
 import "actions/CreateBot.proto";
@@ -145,7 +144,6 @@ service DalalActionService {
 
 	//Admin
 	rpc SendNews(actions.SendNewsRequest)								returns (actions.SendNewsResponse);
-  rpc SendDividends(actions.SendDividendsRequest)     returns (actions.SendDividendsResponse);
 
 }
 
