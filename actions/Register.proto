@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package dalalstreet.api.actions;
 
+option java_multiple_files=true;
+
 message RegisterRequest{
     string email = 1;
     string password = 2;

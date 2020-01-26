@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package dalalstreet.api.actions;
 
+option java_multiple_files=true;
+
 import "models/User.proto";
 
 message GetPortfolioRequest {
