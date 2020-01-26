@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package dalalstreet.api.datastreams;
 
+option java_multiple_files=true;
+
 message Trade {
     uint64 trade_price = 1;
     uint64 trade_quantity = 2;

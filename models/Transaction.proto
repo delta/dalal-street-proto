@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package dalalstreet.api.models;
 
+option java_multiple_files=true;
+
 enum TransactionType {
     FROM_EXCHANGE_TRANSACTION = 0;
     ORDER_FILL_TRANSACTION = 1;

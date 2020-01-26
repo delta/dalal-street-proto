@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package dalalstreet.api.models;
 
+option java_multiple_files=true;
+
 message MarketEvent {
     uint32 id = 1;
     uint32 stock_id = 2;

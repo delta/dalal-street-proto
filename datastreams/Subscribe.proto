@@ -1,6 +1,8 @@
 syntax = "proto3";
 package dalalstreet.api.datastreams;
 
+option java_multiple_files=true;
+
 enum DataStreamType {
     MARKET_DEPTH = 0;
     TRANSACTIONS = 1;
