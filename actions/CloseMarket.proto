@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package dalalstreet.api.actions;
+
+option java_multiple_files=true;
+
+message CloseMarketRequest{
+}
+
+message CloseMarketResponse{
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+    }
+    StatusCode status_code = 1;
+    string     status_message = 2;
+}
