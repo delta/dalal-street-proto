@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package dalalstreet.api.models;
+
+enum GameStateUpdateType {
+    MarketStateUpdate = 0;
+    StockDividendStateUpdate = 1;
+    OtpVerifiedStateUpdate = 2;
+    StockBankruptStateUpdate = 3;
+}
+
+message MarketState {
+    bool open_or_close = 1;
+}
+
+message StockDividendState {
+    uint32 stock_id = 1;
+    bool gives_dividend = 2;
+}
+
+message OtpVerifiedState {
+    bool is_verified = 1;
+}
+
+message StockBankruptState {
+    uint32 stock_id = 1;
+    bool is_bankrupt = 2;
+}
+
+message GameState {
+    uint32 user_id = 1;
+    models.GameStateUpdateType type = 2;
+    models.MarketState market_state = 3;
+    models.StockDividendState stock_dividend_state = 4;
+    models.OtpVerifiedState otp_verified_state = 5;
+    models.StockBankruptState stock_bankrupt_state = 6;
+}

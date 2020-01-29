@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package dalalstreet.api.datastreams;
+
+import "models/GameState.proto";
+
+
+// In proto3 fields are optional by default, we can send appropriate update
+message GameStateUpdate {
+    models.GameState game_state = 1;
+}
