@@ -12,6 +12,7 @@ enum DataStreamType {
     MARKET_EVENTS = 5;
     MY_ORDERS = 6;
     STOCK_HISTORY = 7;
+    GAME_STATE = 8;
 }
 
 message SubscriptionId {
