@@ -20,6 +20,7 @@ message RetrieveMortgageStocksResponse {
         InvalidRetrievePriceError = 4;
         NotEnoughStocksError = 5;
         NotEnoughCashError = 6;
+        UserNotPhoneVerfiedError = 7;
     }
     StatusCode status_code = 1;
     string     status_message = 2;

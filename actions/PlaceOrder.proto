@@ -21,6 +21,7 @@ message PlaceOrderResponse {
         StockQuantityLimitExceeded = 3; // when stock_quantity in request >= Max allowed
         NotEnoughStocksError = 4; // when the user does not have enough stocks to sell
         NotEnoughCashError = 5; // when the user does not have enough cash to buy
+        UserNotPhoneVerfiedError = 6;
     }
     StatusCode status_code = 1;
     string status_message = 2;
