@@ -17,6 +17,7 @@ message BuyStocksFromExchangeResponse {
         NotEnoughStocksError = 3;
         NotEnoughCashError = 4;
         BuyLimitExceededError = 5;
+        UserNotPhoneVerfiedError = 6;
     }
     StatusCode status_code = 1;
     string status_message = 2;

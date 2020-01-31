@@ -17,6 +17,7 @@ message MortgageStocksResponse {
         MarketClosedError = 2;
         InvalidStockIdError = 3;
         NotEnoughStocksError = 4;
+        UserNotPhoneVerfiedError = 5;
     }
     StatusCode status_code = 1;
     string     status_message = 2;

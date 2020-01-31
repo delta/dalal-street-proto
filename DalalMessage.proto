@@ -25,6 +25,8 @@ import "actions/GetStockHistory.proto";
 import "actions/Register.proto";
 import "actions/ForgotPassword.proto";
 import "actions/ChangePassword.proto";
+import "actions/AddPhone.proto";
+import "actions/VerifyOTP.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -142,6 +144,8 @@ service DalalActionService {
 	rpc Register(actions.RegisterRequest)								returns (actions.RegisterResponse);
 	rpc ForgotPassword(actions.ForgotPasswordRequest)                   returns (actions.ForgotPasswordResponse);
 	rpc ChangePassword(actions.ChangePasswordRequest)                   returns (actions.ChangePasswordResponse);
+	rpc AddPhone(actions.AddPhoneRequest)								returns (actions.AddPhoneResponse);
+	rpc VerifyPhone(actions.VerifyOTPRequest)							returns (actions.VerifyOTPResponse);
 
 	//Bots
 	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
