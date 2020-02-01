@@ -1,0 +1,16 @@
+syntax = "proto3";
+package dalalstreet.api.actions;
+
+message UpdateStockPriceRequest {
+    uint32 stock_id = 1;
+    uint64 new_price = 2;
+}
+
+message UpdateStockPriceResponse {
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+    }
+    StatusCode status_code = 1;
+    string     status_message = 2;
+}

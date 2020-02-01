@@ -11,6 +11,13 @@ import "actions/PlaceOrder.proto";
 import "actions/RetrieveMortgageStocks.proto";
 import "actions/SendNews.proto";
 import "actions/SendDividends.proto";
+import "actions/SendNotifications.proto";
+import "actions/OpenMarket.proto";
+import "actions/CloseMarket.proto";
+import "actions/LoadStocks.proto";
+import "actions/AddStocksToExchange.proto";
+import "actions/UpdateStockPrice.proto";
+import "actions/AddMarketEvent.proto";
 
 import "actions/GetPortfolio.proto";
 import "actions/CreateBot.proto";
@@ -153,8 +160,14 @@ service DalalActionService {
 
 	//Admin
 	rpc SendNews(actions.SendNewsRequest)								returns (actions.SendNewsResponse);
-  rpc SendDividends(actions.SendDividendsRequest)     returns (actions.SendDividendsResponse);
-
+    rpc SendDividends(actions.SendDividendsRequest)     returns (actions.SendDividendsResponse);
+	rpc SendNotifications(actions.SendNotificationsRequest) returns (actions.SendNotificationsResponse);
+    rpc OpenMarket(actions.OpenMarketRequest) returns (actions.OpenMarketResponse);
+	rpc CloseMarket(actions.CloseMarketRequest) returns (actions.CloseMarketResponse);
+	rpc LoadStocks(actions.LoadStocksRequest) returns (actions.LoadStocksResponse);
+	rpc AddStocksToExchange(actions.AddStocksToExchangeRequest) returns (actions.AddStocksToExchangeResponse);
+	rpc UpdateStockPrice(actions.UpdateStockPriceRequest) returns (actions.UpdateStockPriceResponse);
+	rpc AddMarketEvent(actions.AddMarketEventRequest) returns (actions.AddMarketEventResponse);
 }
 
 service DalalStreamService {
