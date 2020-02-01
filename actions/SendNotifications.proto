@@ -1,0 +1,17 @@
+syntax = "proto3";
+package dalalstreet.api.actions;
+
+message SendNotificationsRequest {
+    uint32 user_id = 1;
+    string text = 2;
+    bool isGlobal = 3;
+}
+
+message SendNotificationsResponse {
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+    }
+    StatusCode status_code = 1;
+    string     status_message = 2;
+}
