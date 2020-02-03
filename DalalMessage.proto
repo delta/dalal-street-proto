@@ -180,6 +180,9 @@ service DalalActionService {
 	rpc BlockUser(actions.BlockUserRequest)     				returns (actions.BlockUserResponse);
 	rpc UnblockUser(actions.UnblockUserRequest)     				returns (actions.UnblockUserResponse);
 	rpc InspectUser(actions.InspectUserRequest)     				returns (actions.InspectUserResponse);
+	rpc SendDividends(actions.SendDividendsRequest)     				returns (actions.SendDividendsResponse);
+	rpc SetGivesDividends(actions.SetGivesDividendsRequest)     		returns (actions.SetGivesDividendsResponse);
+
 }
 
 service DalalStreamService {
