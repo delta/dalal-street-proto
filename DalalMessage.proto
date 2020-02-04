@@ -44,6 +44,8 @@ import "datastreams/StockExchange.proto";
 import "datastreams/MarketEvents.proto";
 import "datastreams/MyOrders.proto";
 import "datastreams/StockHistory.proto";
+import "datastreams/GameState.proto";
+
 /*
 message RequestWrapper {
     string request_id = 1;
@@ -184,4 +186,5 @@ service DalalStreamService {
 	rpc GetStockPricesUpdates(datastreams.SubscriptionId)	returns (stream datastreams.StockPricesUpdate);
 	rpc GetTransactionUpdates(datastreams.SubscriptionId)	returns (stream datastreams.TransactionUpdate);
 	rpc GetStockHistoryUpdates(datastreams.SubscriptionId)  returns (stream datastreams.StockHistoryUpdate);
+	rpc GetGameStateUpdates(datastreams.SubscriptionId)		returns (stream datastreams.GameStateUpdate);
 }
