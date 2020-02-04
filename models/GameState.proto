@@ -10,7 +10,7 @@ enum GameStateUpdateType {
 }
 
 message MarketState {
-    bool open_or_close = 1;
+    bool is_market_open = 1;
 }
 
 message StockDividendState {
