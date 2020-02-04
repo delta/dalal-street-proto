@@ -23,4 +23,5 @@ message Stock {
   string created_at = 16;
   string updated_at = 17;
   bool   gives_dividends = 18;
+  bool   is_bankrupt = 19;
 }
