@@ -18,6 +18,7 @@ import "actions/LoadStocks.proto";
 import "actions/AddStocksToExchange.proto";
 import "actions/UpdateStockPrice.proto";
 import "actions/AddMarketEvent.proto";
+import "actions/BankruptStock.proto";
 
 import "actions/GetPortfolio.proto";
 import "actions/CreateBot.proto";
@@ -170,6 +171,7 @@ service DalalActionService {
 	rpc AddStocksToExchange(actions.AddStocksToExchangeRequest) returns (actions.AddStocksToExchangeResponse);
 	rpc UpdateStockPrice(actions.UpdateStockPriceRequest) returns (actions.UpdateStockPriceResponse);
 	rpc AddMarketEvent(actions.AddMarketEventRequest) returns (actions.AddMarketEventResponse);
+	rpc BankruptStock(actions.BankruptStockRequest) returns (actions.BankruptStockResponse);
 }
 
 service DalalStreamService {
