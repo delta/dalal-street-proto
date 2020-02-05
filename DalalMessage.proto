@@ -34,6 +34,7 @@ import "actions/ForgotPassword.proto";
 import "actions/ChangePassword.proto";
 import "actions/AddPhone.proto";
 import "actions/VerifyOTP.proto";
+import "actions/SetGivesDividends.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -158,7 +159,7 @@ service DalalActionService {
 
 	//Bots
 	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
-	rpc CreateBot(actions.CreateBotRequest)							returns (actions.CreateBotResponse);
+	rpc CreateBot(actions.CreateBotRequest)								returns (actions.CreateBotResponse);
 
 	//Admin
 	rpc SendNews(actions.SendNewsRequest)								returns (actions.SendNewsResponse);
@@ -170,6 +171,8 @@ service DalalActionService {
 	rpc AddStocksToExchange(actions.AddStocksToExchangeRequest) returns (actions.AddStocksToExchangeResponse);
 	rpc UpdateStockPrice(actions.UpdateStockPriceRequest) returns (actions.UpdateStockPriceResponse);
 	rpc AddMarketEvent(actions.AddMarketEventRequest) returns (actions.AddMarketEventResponse);
+	rpc SetGivesDividends(actions.SetGivesDividendsRequest)     		returns (actions.SetGivesDividendsResponse);
+
 }
 
 service DalalStreamService {
