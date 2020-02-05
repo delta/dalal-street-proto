@@ -22,4 +22,5 @@ message Stock {
   double real_avg_price = 15;
   string created_at = 16;
   string updated_at = 17;
+  bool   gives_dividends = 18;
 }
