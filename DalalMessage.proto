@@ -36,6 +36,9 @@ import "actions/AddPhone.proto";
 import "actions/VerifyOTP.proto";
 import "actions/SetGivesDividends.proto";
 import "actions/SetBankruptcy.proto";
+import "actions/BlockUser.proto";
+import "actions/UnblockUser.proto";
+import "actions/InspectUser.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -173,9 +176,10 @@ service DalalActionService {
 	rpc UpdateStockPrice(actions.UpdateStockPriceRequest) returns (actions.UpdateStockPriceResponse);
 	rpc AddMarketEvent(actions.AddMarketEventRequest) returns (actions.AddMarketEventResponse);
 	rpc SetGivesDividends(actions.SetGivesDividendsRequest)     		returns (actions.SetGivesDividendsResponse);
-	rpc SetBankruptcy(actions.SetBankruptcyRequest)     				returns (actions.SetBankruptcyResponse);
-
-
+    rpc SetBankruptcy(actions.SetBankruptcyRequest)     				returns (actions.SetBankruptcyResponse);
+	rpc BlockUser(actions.BlockUserRequest)     				returns (actions.BlockUserResponse);
+	rpc UnblockUser(actions.UnblockUserRequest)     				returns (actions.UnblockUserResponse);
+	rpc InspectUser(actions.InspectUserRequest)     				returns (actions.InspectUserResponse);
 }
 
 service DalalStreamService {

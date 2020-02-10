@@ -1,11 +1,15 @@
 syntax = "proto3";
 package dalalstreet.api.actions;
 
-message OpenMarketRequest {
-    bool update_day_high_and_low = 2;
+import "models/InspectDetails.proto";
+
+option java_multiple_files=true;
+
+message InspectUserRequest {
+    uint32 user_id = 2;
 }
 
-message OpenMarketResponse {
+message InspectUserResponse {
     enum StatusCode {
         OK = 0;
         InternalServerError = 1;
@@ -14,4 +18,5 @@ message OpenMarketResponse {
     }
     StatusCode status_code = 1;
     string     status_message = 2;
+    repeated models.InspectDetails list = 3; 
 }

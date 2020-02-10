@@ -10,6 +10,7 @@ message CloseMarketResponse {
         OK = 0;
         InternalServerError = 1;
         InvalidUserIDError = 2;
+        NotAdminUserError = 3;
     }
     StatusCode status_code = 1;
     string     status_message = 2;
