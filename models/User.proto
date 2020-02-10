@@ -14,4 +14,5 @@ message User {
   bool is_human=7;
   uint64 reserved_cash = 8;
   bool is_phone_verified = 9;
+  bool is_admin = 10;
 }
