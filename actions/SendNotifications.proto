@@ -11,6 +11,7 @@ message SendNotificationsResponse {
     enum StatusCode {
         OK = 0;
         InternalServerError = 1;
+        NotAdminUserError = 2;
     }
     StatusCode status_code = 1;
     string     status_message = 2;
