@@ -17,4 +17,6 @@ message User {
   bool is_admin = 10;
   bool is_otp_blocked = 11;
   int64 otp_request_count = 12;
+  bool is_blocked = 13;
+  int64 block_count = 14;
 }

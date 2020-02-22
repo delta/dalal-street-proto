@@ -15,6 +15,7 @@ message CancelOrderResponse {
         InvalidOrderId = 3;
         UserNotPhoneVerfiedError = 4;
         StockBankruptError = 5;
+        UserBlockedError = 6;
     }
     StatusCode status_code = 1;
     string status_message = 2;

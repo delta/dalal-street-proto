@@ -22,6 +22,7 @@ message RetrieveMortgageStocksResponse {
         NotEnoughCashError = 6;
         UserNotPhoneVerfiedError = 7;
         StockBankruptError = 8;
+        UserBlockedError = 9;
     }
     StatusCode status_code = 1;
     string     status_message = 2;

@@ -23,6 +23,7 @@ message PlaceOrderResponse {
         NotEnoughCashError = 5; // when the user does not have enough cash to buy
         UserNotPhoneVerfiedError = 6;
         StockBankruptError = 7;
+        UserBlockedError = 8;
     }
     StatusCode status_code = 1;
     string status_message = 2;
