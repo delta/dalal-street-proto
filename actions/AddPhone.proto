@@ -13,6 +13,7 @@ message AddPhoneResponse {
         OK = 0;
         InternalServerError = 1;
         PhoneNoAlreadyTakenError = 2;
+        UserOTPBlockedError = 3;
     }
 
     StatusCode status_code = 1;

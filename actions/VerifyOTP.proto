@@ -15,6 +15,7 @@ message VerifyOTPResponse {
         InternalServerError = 1;
         OTPMismatchError = 2;
         OTPExpiredError = 3;
+        UserOTPBlockedError = 4;
     }
 
     StatusCode status_code = 1;
