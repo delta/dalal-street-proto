@@ -39,6 +39,7 @@ import "actions/SetBankruptcy.proto";
 import "actions/BlockUser.proto";
 import "actions/UnblockUser.proto";
 import "actions/InspectUser.proto";
+import "actions/UnblockAllUsers.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -180,6 +181,7 @@ service DalalActionService {
 	rpc InspectUser(actions.InspectUserRequest)     				returns (actions.InspectUserResponse);
 	rpc BlockUser(actions.BlockUserRequest)     				returns (actions.BlockUserResponse);
 	rpc UnBlockUser(actions.UnblockUserRequest)     				returns (actions.UnblockUserResponse);
+	rpc UnBlockAllUsers(actions.UnblockAllUsersRequest)     				returns (actions.UnblockAllUsersResponse);
 }
 
 service DalalStreamService {
