@@ -15,4 +15,6 @@ message User {
   uint64 reserved_cash = 8;
   bool is_phone_verified = 9;
   bool is_admin = 10;
+  bool is_otp_blocked = 11;
+  int64 otp_request_count = 12;
 }
