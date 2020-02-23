@@ -29,6 +29,9 @@ message StockBankruptState {
     bool is_bankrupt = 2;
 }
 
+message UserIdentityLogState {
+}
+
 message GameState {
     uint32 user_id = 1;
     models.GameStateUpdateType type = 2;

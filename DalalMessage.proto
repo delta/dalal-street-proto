@@ -39,6 +39,9 @@ import "actions/SetBankruptcy.proto";
 import "actions/BlockUser.proto";
 import "actions/UnblockUser.proto";
 import "actions/InspectUser.proto";
+import "actions/UpdateUserIdentity.proto";
+import "actions/GetUserIdentity.proto";
+import "actions/SendClientIdentityLog.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -176,7 +179,10 @@ service DalalActionService {
 	rpc UpdateStockPrice(actions.UpdateStockPriceRequest) returns (actions.UpdateStockPriceResponse);
 	rpc AddMarketEvent(actions.AddMarketEventRequest) returns (actions.AddMarketEventResponse);
 	rpc SetGivesDividends(actions.SetGivesDividendsRequest)     		returns (actions.SetGivesDividendsResponse);
-    rpc SetBankruptcy(actions.SetBankruptcyRequest)     				returns (actions.SetBankruptcyResponse);
+	rpc SetBankruptcy(actions.SetBankruptcyRequest)     				returns (actions.SetBankruptcyResponse);
+	rpc GetUserIdentity(actions.GetUserIdentiyRequest)               returns (actions.GetUserIdentiyResponse);
+	rpc UpdateUserIdentity(actions.UpdateUserIdentityRequest)			returns (actions.UpdateUserIdentityResponse);
+	rpc SendClientIdentityLog(actions.SendClientIdentityLogRequest)		returns (actions.SendClientIdentityLogResponse);
 }
 
 service DalalStreamService {
