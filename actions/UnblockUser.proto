@@ -2,7 +2,7 @@ syntax = "proto3";
 package dalalstreet.api.actions;
 
 message UnblockUserRequest {
-    uint32 user_id = 2;
+    uint32 user_id = 1;
 }
 
 message UnblockUserResponse {
