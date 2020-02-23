@@ -6,6 +6,8 @@ package dalalstreet.api.models;
 message InspectDetails {
   uint32 id = 1;
   string email = 2;
-  uint64 count = 3;
+  uint64 transaction_count = 3;
   uint32 position = 4;
+  int64 stock_sum = 5;
+  int64 reservedstock_sum = 6;
 }
