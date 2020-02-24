@@ -13,4 +13,5 @@ message LeaderboardRow {
     uint64 debt = 6;
     int64  stock_worth = 7;
     int64  total_worth = 8;
+    bool is_blocked =9;
 }
