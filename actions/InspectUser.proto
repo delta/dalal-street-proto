@@ -8,6 +8,7 @@ option java_multiple_files=true;
 message InspectUserRequest {
     uint32 user_id = 1;
     bool transaction_type = 2;
+    uint32 day = 3;
 }
 
 message InspectUserResponse {
