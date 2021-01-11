@@ -40,6 +40,7 @@ import "actions/BlockUser.proto";
 import "actions/UnblockUser.proto";
 import "actions/InspectUser.proto";
 import "actions/UnblockAllUsers.proto";
+import "actions/GetReferralCode.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -161,6 +162,7 @@ service DalalActionService {
 	rpc ChangePassword(actions.ChangePasswordRequest)                   returns (actions.ChangePasswordResponse);
 	rpc AddPhone(actions.AddPhoneRequest)								returns (actions.AddPhoneResponse);
 	rpc VerifyPhone(actions.VerifyOTPRequest)							returns (actions.VerifyOTPResponse);
+	rpc GetReferralCode(actions.GetReferralCodeRequest)		returns (actions.GetReferralCodeResponse);
 
 	//Bots
 	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
