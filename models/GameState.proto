@@ -10,6 +10,7 @@ enum GameStateUpdateType {
     OtpVerifiedStateUpdate = 2;
     StockBankruptStateUpdate = 3;
     UserBlockStateUpdate = 4;
+    UserReferredCreditUpdate = 5;
 }
 
 message MarketState {
@@ -34,6 +35,10 @@ message UserBlockState{
     bool is_blocked = 1;
 }
 
+message UserReferredCredit{
+    uint64 cash = 1;
+}
+
 message GameState {
     uint32 user_id = 1;
     models.GameStateUpdateType type = 2;
@@ -42,4 +47,5 @@ message GameState {
     models.OtpVerifiedState otp_verified_state = 5;
     models.StockBankruptState stock_bankrupt_state = 6;
     models.UserBlockState user_block_state = 7;
+    models.UserReferredCredit user_referred_credit = 8;
 }
