@@ -20,4 +20,5 @@ message VerifyOTPResponse {
 
     StatusCode status_code = 1;
     string status_message = 2;
+    uint64 user_cash = 3;
 }
