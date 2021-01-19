@@ -1,0 +1,20 @@
+syntax = "proto3";
+package dalalstreet.api.actions;
+
+message DailyChallenge {
+    string daily_challenge = 1;
+}
+
+message GetDailyChallengesRequest {
+    uint32 market_day = 1;
+}
+
+message GetDailyChallengesResponse {
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+        InvalidCredentialsError = 2;
+    }
+    StatusCode status_code = 1;
+    repeated DailyChallenge daily_challenges = 2;
+}

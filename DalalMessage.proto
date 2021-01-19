@@ -19,6 +19,7 @@ import "actions/LoadStocks.proto";
 import "actions/AddStocksToExchange.proto";
 import "actions/UpdateStockPrice.proto";
 import "actions/AddMarketEvent.proto";
+import "actions/AddDailyChallenge.proto";
 
 import "actions/GetPortfolio.proto";
 import "actions/CreateBot.proto";
@@ -43,6 +44,7 @@ import "actions/UnblockUser.proto";
 import "actions/InspectUser.proto";
 import "actions/UnblockAllUsers.proto";
 import "actions/GetReferralCode.proto";
+import "actions/GetDailyChallenges.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -156,6 +158,7 @@ service DalalActionService {
 	rpc GetMarketEvents(actions.GetMarketEventsRequest)     			returns (actions.GetMarketEventsResponse);
 	rpc GetNotifications(actions.GetNotificationsRequest)   			returns (actions.GetNotificationsResponse);
 	rpc GetStockHistory(actions.GetStockHistoryRequest)						returns (actions.GetStockHistoryResponse);
+	rpc GetDailyChallenges (actions.GetDailyChallengesRequest) returns (actions.GetDailyChallengesResponse);
 
 	// Auth
 	rpc Login(actions.LoginRequest) 									returns (actions.LoginResponse);
@@ -188,6 +191,7 @@ service DalalActionService {
 	rpc BlockUser(actions.BlockUserRequest)     				returns (actions.BlockUserResponse);
 	rpc UnBlockUser(actions.UnblockUserRequest)     				returns (actions.UnblockUserResponse);
 	rpc UnBlockAllUsers(actions.UnblockAllUsersRequest)     				returns (actions.UnblockAllUsersResponse);
+	rpc AddDailyChallenge (actions.AddDailyChallengeRequest) returns (actions.AddDailyChallengeResponse);
 }
 
 service DalalStreamService {
