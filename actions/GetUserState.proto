@@ -1,21 +1,19 @@
 syntax = "proto3";
 package dalalstreet.api.actions;
 
-message DailyChallenge {
-    string daily_challenge = 1;
-    uint32 daily_challenge_id = 2;
-}
+import "models/UserState.proto";
 
-message GetDailyChallengesRequest {
+message GetUserStateRequest {
     uint32 market_day = 1;
 }
 
-message GetDailyChallengesResponse {
+message GetUserStateResponse {
     enum StatusCode {
         OK = 0;
         InternalServerError = 1;
         InvalidArgumentError = 2;
+        UnavailableError = 3;
     }
     StatusCode status_code = 1;
-    repeated DailyChallenge daily_challenges = 2;
+    map<uint32,models.UserState> projects = 3; //<key:value> <challenge_id : userState>
 }
