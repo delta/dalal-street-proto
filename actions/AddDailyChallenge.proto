@@ -1,13 +1,14 @@
 syntax = "proto3";
 package dalalstreet.api.actions;
 
+enum ChallengeType {
+    Cash = 0;
+    NetWorth = 1;
+    StockWorth = 2;
+    SpecificStock = 3;
+}
+
 message AddDailyChallengeRequest {
-    enum ChallengeType {
-        Cash = 0;
-        NetWorth = 1;
-        StockWorth = 2;
-        SpecificStock = 3;
-    }
     uint32 market_day = 1;
     ChallengeType challenge_type = 2;
     uint32 value = 3;
