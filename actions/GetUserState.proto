@@ -15,5 +15,5 @@ message GetUserStateResponse {
         UnavailableError = 3;
     }
     StatusCode status_code = 1;
-    map<uint32,models.UserState> projects = 3; //<key:value> <challenge_id : userState>
+    map<uint32,models.UserState> user_challenges = 3; //<key:value> <challenge_id : userState>
 }

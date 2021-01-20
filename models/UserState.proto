@@ -5,7 +5,7 @@ package dalalstreet.api.models;
 message UserState {
     uint32 challenge_id = 1;
     uint32 user_id = 2;
-    uint32 marketDay = 3;
+    uint32 market_day = 3;
     uint32 initial_value = 4;
     uint32 final_value = 5;
     bool is_completed = 6;
