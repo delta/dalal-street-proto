@@ -11,8 +11,8 @@ enum ChallengeType {
 message AddDailyChallengeRequest {
     uint32 market_day = 1;
     ChallengeType challenge_type = 2;
-    uint32 value = 3;
-    uint64 stockId =4;
+    uint64 value = 3;
+    uint32 stockId =4;
 }
 
 message AddDailyChallengeResponse {
