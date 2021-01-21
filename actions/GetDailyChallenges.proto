@@ -15,5 +15,6 @@ message GetDailyChallengesResponse {
         InternalServerError = 1;
     }
     StatusCode status_code = 1;
-    repeated DailyChallenge daily_challenges = 2;
+    string     status_message = 2;
+    repeated DailyChallenge daily_challenges = 3;
 }
