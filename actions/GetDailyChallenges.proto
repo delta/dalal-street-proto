@@ -1,10 +1,7 @@
 syntax = "proto3";
 package dalalstreet.api.actions;
 
-message DailyChallenge {
-    string daily_challenge = 1;
-    uint32 daily_challenge_id = 2;
-}
+import "models/DailyChallenge.proto";
 
 message GetDailyChallengesRequest {
 }
@@ -16,5 +13,5 @@ message GetDailyChallengesResponse {
     }
     StatusCode status_code = 1;
     string     status_message = 2;
-    repeated DailyChallenge daily_challenges = 3;
+    repeated models.DailyChallenge daily_challenges = 3;
 }

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package dalalstreet.api.models;
+
+message DailyChallenge {
+    uint32 challenge_id = 1;
+    uint32 Market_day = 2;
+    string Challenge_type = 3;
+    uint64 value = 4;
+    uint32 stock_id = 5;
+}
