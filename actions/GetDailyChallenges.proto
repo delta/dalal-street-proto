@@ -7,7 +7,6 @@ message DailyChallenge {
 }
 
 message GetDailyChallengesRequest {
-    uint32 market_day = 1;
 }
 
 message GetDailyChallengesResponse {
