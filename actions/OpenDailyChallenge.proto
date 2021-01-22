@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package dalalstreet.api.actions;
 
-message OpenDailyChallengeRequest {// saves userstate for daily challenges
+message OpenDailyChallengeRequest {// opens dailyChallenge and saves userstate for daily challenges
 
 }
 
@@ -11,7 +11,6 @@ message OpenDailyChallengeResponse {
         OK = 0;
         InternalServerError = 1;
         InvalidUserIDError = 2;
-        NotAdminUserError = 3;
     }
     StatusCode status_code = 1;
     string     status_message = 2;
