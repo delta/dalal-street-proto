@@ -20,6 +20,7 @@ message AddDailyChallengeResponse {
         OK = 0;
         InternalServerError = 1;
         NotAdminUserError = 2;
+        InvalidRequestError = 3;
     }
     StatusCode status_code = 1;
     string     status_message = 2;
