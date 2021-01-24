@@ -1,0 +1,25 @@
+syntax = "proto3";
+package dalalstreet.api.actions;
+
+option java_multiple_files=true;
+
+import "models/DailyLeaderboardRow.proto";
+
+message GetDailyLeaderboardRequest {
+  uint32 starting_id = 1;
+  uint32 count = 2;
+}
+
+message GetDailyLeaderboardResponse {
+  enum StatusCode {
+    OK = 0;
+    InternalServerError = 1;
+  }
+  StatusCode status_code = 1;
+  string     status_message = 2;
+
+  uint32 my_rank = 3;
+  int64  my_total_worth = 4;
+  uint32 total_users = 5;
+  repeated models.DailyLeaderboardRow rank_list = 6;  // key: rank, value: dailyLeaderboard row
+}
