@@ -14,6 +14,7 @@ import "actions/SendDividends.proto";
 import "actions/SendNotifications.proto";
 import "actions/OpenMarket.proto";
 import "actions/CloseMarket.proto";
+import "actions/UpdateEndOfDayValues.proto";
 import "actions/LoadStocks.proto";
 import "actions/AddStocksToExchange.proto";
 import "actions/UpdateStockPrice.proto";
@@ -28,6 +29,7 @@ import "actions/GetNotifications.proto";
 import "actions/GetTransactions.proto";
 import "actions/GetMortgageDetails.proto";
 import "actions/GetLeaderboard.proto";
+import "actions/GetDailyLeaderboard.proto";
 import "actions/GetStockHistory.proto";
 import "actions/Register.proto";
 import "actions/ForgotPassword.proto";
@@ -150,6 +152,7 @@ service DalalActionService {
 	// Getting general information
 	rpc GetCompanyProfile(actions.GetCompanyProfileRequest)				returns (actions.GetCompanyProfileResponse);
 	rpc GetLeaderboard(actions.GetLeaderboardRequest)					returns (actions.GetLeaderboardResponse);
+	rpc GetDailyLeaderboard(actions.GetDailyLeaderboardRequest)					returns (actions.GetDailyLeaderboardResponse);
 	rpc GetMarketEvents(actions.GetMarketEventsRequest)     			returns (actions.GetMarketEventsResponse);
 	rpc GetNotifications(actions.GetNotificationsRequest)   			returns (actions.GetNotificationsResponse);
 	rpc GetStockHistory(actions.GetStockHistoryRequest)						returns (actions.GetStockHistoryResponse);
@@ -174,6 +177,7 @@ service DalalActionService {
 	rpc SendNotifications(actions.SendNotificationsRequest) returns (actions.SendNotificationsResponse);
     rpc OpenMarket(actions.OpenMarketRequest) returns (actions.OpenMarketResponse);
 	rpc CloseMarket(actions.CloseMarketRequest) returns (actions.CloseMarketResponse);
+	rpc UpdateEndOfDayValues(actions.UpdateEndOfDayValuesRequest) returns(actions.UpdateEndOfDayValuesResponse);
 	rpc LoadStocks(actions.LoadStocksRequest) returns (actions.LoadStocksResponse);
 	rpc AddStocksToExchange(actions.AddStocksToExchangeRequest) returns (actions.AddStocksToExchangeResponse);
 	rpc UpdateStockPrice(actions.UpdateStockPriceRequest) returns (actions.UpdateStockPriceResponse);

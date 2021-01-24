@@ -1,2 +1,3 @@
 proto_build/*
 *.swp
+.idea
