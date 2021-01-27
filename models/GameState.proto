@@ -39,6 +39,10 @@ message UserReferredCredit{
     uint64 cash = 1;
 }
 
+message DailyChallengeState {
+    bool is_daily_challenge_open = 1;
+}
+
 message GameState {
     uint32 user_id = 1;
     models.GameStateUpdateType type = 2;
@@ -48,4 +52,5 @@ message GameState {
     models.StockBankruptState stock_bankrupt_state = 6;
     models.UserBlockState user_block_state = 7;
     models.UserReferredCredit user_referred_credit = 8;
+    models.DailyChallengeState daily_challenge_state = 9;
 }

@@ -47,6 +47,7 @@ import "actions/InspectUser.proto";
 import "actions/UnblockAllUsers.proto";
 import "actions/GetReferralCode.proto";
 import "actions/GetDailyChallenges.proto";
+import "actions/GetMyUserState.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -152,6 +153,7 @@ service DalalActionService {
 	rpc GetMyClosedBids(actions.GetMyClosedBidsRequest)					returns (actions.GetMyClosedBidsResponse);
 	rpc GetTransactions(actions.GetTransactionsRequest)   				returns (actions.GetTransactionsResponse);
 	rpc GetMortgageDetails(actions.GetMortgageDetailsRequest) 			returns (actions.GetMortgageDetailsResponse);
+	rpc GetMyUserState (actions.GetUserStateRequest) returns (actions.GetUserStateResponse);
 
 	// Getting general information
 	rpc GetCompanyProfile(actions.GetCompanyProfileRequest)				returns (actions.GetCompanyProfileResponse);
