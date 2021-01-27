@@ -153,7 +153,7 @@ service DalalActionService {
 	rpc GetMyClosedBids(actions.GetMyClosedBidsRequest)					returns (actions.GetMyClosedBidsResponse);
 	rpc GetTransactions(actions.GetTransactionsRequest)   				returns (actions.GetTransactionsResponse);
 	rpc GetMortgageDetails(actions.GetMortgageDetailsRequest) 			returns (actions.GetMortgageDetailsResponse);
-	rpc GetMyUserState (actions.GetUserStateRequest) returns (actions.GetUserStateResponse);
+	rpc GetMyUserState (actions.GetMyUserStateRequest) returns (actions.GetMyUserStateResponse);
 
 	// Getting general information
 	rpc GetCompanyProfile(actions.GetCompanyProfileRequest)				returns (actions.GetCompanyProfileResponse);

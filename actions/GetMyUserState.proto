@@ -3,12 +3,12 @@ package dalalstreet.api.actions;
 
 import "models/UserState.proto";
 
-message GetUserStateRequest {
+message GetMyUserStateRequest {
     uint32 market_day = 1;
     uint32 challenge_id = 2;
 }
 
-message GetUserStateResponse {
+message GetMyUserStateResponse {
     enum StatusCode {
         OK = 0;
         InternalServerError = 1;
