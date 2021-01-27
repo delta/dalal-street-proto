@@ -13,6 +13,7 @@ message AddDailyChallengeRequest {
     ChallengeType challenge_type = 2;
     uint64 value = 3;
     uint32 stockId =4;
+    uint32 reward = 5;
 }
 
 message AddDailyChallengeResponse {
