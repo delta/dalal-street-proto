@@ -11,6 +11,7 @@ enum GameStateUpdateType {
     StockBankruptStateUpdate = 3;
     UserBlockStateUpdate = 4;
     UserReferredCreditUpdate = 5;
+    DailyChallengeStatusUpdate = 6;
 }
 
 message MarketState {
