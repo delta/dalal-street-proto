@@ -179,7 +179,7 @@ service DalalActionService {
 	rpc AddPhone(actions.AddPhoneRequest)								returns (actions.AddPhoneResponse);
 	rpc VerifyPhone(actions.VerifyOTPRequest)							returns (actions.VerifyOTPResponse);
 	rpc GetReferralCode(actions.GetReferralCodeRequest)		            returns (actions.GetReferralCodeResponse);
-	rpc AddSubscription(actions.AddUserSubscriptionRequest)             returns (actions.AddUserSubscriptionResponse);  
+	rpc AddUserSubscription(actions.AddUserSubscriptionRequest)             returns (actions.AddUserSubscriptionResponse);  
 
 	//Bots
 	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
