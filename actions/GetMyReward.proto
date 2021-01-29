@@ -12,6 +12,7 @@ message GetMyRewardResponse{
         InternalServerError = 1;
         InvalidUserError = 2;
         InvalidCerdentialError = 3;
+        InvalidRequestError = 4;
     }
     StatusCode status_code = 1;
     string     status_message = 2;
