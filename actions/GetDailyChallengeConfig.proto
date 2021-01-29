@@ -16,5 +16,4 @@ message GetDailyChallengeConfigResponse{
     string     status_message = 2;
     uint32 market_day =3;
     bool is_daily_challeng_open =4;
-    uint32 total_market_days = 5;
 }
