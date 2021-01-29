@@ -16,5 +16,5 @@ message GetMyRewardResponse{
     }
     StatusCode status_code = 1;
     string     status_message = 2;
-    uint32 reward =3;
+    uint64 reward =3;
 }
