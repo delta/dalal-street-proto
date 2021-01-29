@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package dalalstreet.api.actions;
+
+message GetMyRewardRequest{
+    uint32 user_state_id = 1;
+}
+
+message GetMyRewardResponse{
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+        InvalidUserError = 2;
+        InvalidCerdentialError = 3;
+    }
+    StatusCode status_code = 1;
+    string     status_message = 2;
+    uint32 reward =3;
+}

@@ -22,6 +22,7 @@ import "actions/AddMarketEvent.proto";
 import "actions/AddDailyChallenge.proto";
 import "actions/OpenDailyChallenge.proto";
 import "actions/CloseDailyChallenge.proto";
+import "actions/SetMarketDay.proto";
 
 import "actions/GetPortfolio.proto";
 import "actions/CreateBot.proto";
@@ -48,6 +49,8 @@ import "actions/UnblockAllUsers.proto";
 import "actions/GetReferralCode.proto";
 import "actions/GetDailyChallenges.proto";
 import "actions/GetMyUserState.proto";
+import "actions/GetMyReward.proto";
+import "actions/GetDailyChallengeConfig.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -154,6 +157,7 @@ service DalalActionService {
 	rpc GetTransactions(actions.GetTransactionsRequest)   				returns (actions.GetTransactionsResponse);
 	rpc GetMortgageDetails(actions.GetMortgageDetailsRequest) 			returns (actions.GetMortgageDetailsResponse);
 	rpc GetMyUserState (actions.GetMyUserStateRequest) returns (actions.GetMyUserStateResponse);
+	rpc GetMyReward (actions.GetMyRewardRequest) returns (actions.GetMyRewardResponse);
 
 	// Getting general information
 	rpc GetCompanyProfile(actions.GetCompanyProfileRequest)				returns (actions.GetCompanyProfileResponse);
@@ -163,6 +167,7 @@ service DalalActionService {
 	rpc GetNotifications(actions.GetNotificationsRequest)   			returns (actions.GetNotificationsResponse);
 	rpc GetStockHistory(actions.GetStockHistoryRequest)						returns (actions.GetStockHistoryResponse);
 	rpc GetDailyChallenges (actions.GetDailyChallengesRequest)          returns (actions.GetDailyChallengesResponse);
+	rpc GetdailyChallengeConfig (actions.GetDailyChallengeConfigRequest) returns (actions.GetDailyChallengeConfigresponse);
 	
 	// Auth
 	rpc Login(actions.LoginRequest) 									returns (actions.LoginResponse);
@@ -198,6 +203,7 @@ service DalalActionService {
 	rpc AddDailyChallenge (actions.AddDailyChallengeRequest) returns (actions.AddDailyChallengeResponse);
 	rpc OpenDailyChallenge (actions.OpenDailyChallengeRequest) returns (actions.OpenDailyChallengeResponse);
 	rpc CloseDailyChallenge (actions.CloseDailyChallengeRequest) returns (actions.CloseDailyChallengeResponse);
+	rpc SetMarketDay (actions.SetMarketDayRequest) returns (actions.SetMarketDayResponse);
 }
 
 service DalalStreamService {
