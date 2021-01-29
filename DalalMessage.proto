@@ -167,7 +167,7 @@ service DalalActionService {
 	rpc GetNotifications(actions.GetNotificationsRequest)   			returns (actions.GetNotificationsResponse);
 	rpc GetStockHistory(actions.GetStockHistoryRequest)						returns (actions.GetStockHistoryResponse);
 	rpc GetDailyChallenges (actions.GetDailyChallengesRequest)          returns (actions.GetDailyChallengesResponse);
-	rpc GetdailyChallengeConfig (actions.GetDailyChallengeConfigRequest) returns (actions.GetDailyChallengeConfigresponse);
+	rpc GetDailyChallengeConfig (actions.GetDailyChallengeConfigRequest) returns (actions.GetDailyChallengeConfigresponse);
 	
 	// Auth
 	rpc Login(actions.LoginRequest) 									returns (actions.LoginResponse);
