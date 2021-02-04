@@ -18,4 +18,3 @@ message GetMyUserStateResponse {
     string     status_message = 2;
     models.UserState user_state = 3;
 }
-
