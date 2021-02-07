@@ -6,9 +6,8 @@ message UserState {
     uint32 id  = 1;
     uint32 challenge_id = 2;
     uint32 user_id = 3;
-    uint32 market_day = 4;
-    int64 initial_value = 5;
-    int64 final_value  = 6;
-    bool is_completed = 7;
-    bool is_reward_clamied = 9;
+    int64 initial_value = 4;
+    int64 final_value  = 5;
+    bool is_completed = 6;
+    bool is_reward_clamied = 7;
 }

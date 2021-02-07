@@ -4,8 +4,7 @@ package dalalstreet.api.actions;
 import "models/UserState.proto";
 
 message GetMyUserStateRequest {
-    uint32 market_day = 1;
-    uint32 challenge_id = 2;
+    uint32 challenge_id = 1;
 }
 
 message GetMyUserStateResponse {
