@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package dalalstreet.api.models;
+
+message UserState {
+    uint32 id  = 1;
+    uint32 challenge_id = 2;
+    uint32 user_id = 3;
+    int64 initial_value = 4;
+    int64 final_value  = 5;
+    bool is_completed = 6;
+    bool is_reward_clamied = 7;
+}
