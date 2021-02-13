@@ -51,6 +51,7 @@ import "actions/GetDailyChallenges.proto";
 import "actions/GetMyUserState.proto";
 import "actions/GetMyReward.proto";
 import "actions/GetDailyChallengeConfig.proto";
+import "actions/AddUserSubscription.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -177,7 +178,8 @@ service DalalActionService {
 	rpc ChangePassword(actions.ChangePasswordRequest)                   returns (actions.ChangePasswordResponse);
 	rpc AddPhone(actions.AddPhoneRequest)								returns (actions.AddPhoneResponse);
 	rpc VerifyPhone(actions.VerifyOTPRequest)							returns (actions.VerifyOTPResponse);
-	rpc GetReferralCode(actions.GetReferralCodeRequest)		returns (actions.GetReferralCodeResponse);
+	rpc GetReferralCode(actions.GetReferralCodeRequest)		            returns (actions.GetReferralCodeResponse);
+	rpc AddUserSubscription(actions.AddUserSubscriptionRequest)             returns (actions.AddUserSubscriptionResponse);  
 
 	//Bots
 	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
