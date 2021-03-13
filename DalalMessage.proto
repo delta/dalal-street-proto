@@ -23,6 +23,8 @@ import "actions/AddDailyChallenge.proto";
 import "actions/OpenDailyChallenge.proto";
 import "actions/CloseDailyChallenge.proto";
 import "actions/SetMarketDay.proto";
+import "actions/InspectDegree.proto";
+import "actions/InspectComponents.proto";
 
 import "actions/GetPortfolio.proto";
 import "actions/CreateBot.proto";
@@ -206,6 +208,8 @@ service DalalActionService {
 	rpc OpenDailyChallenge (actions.OpenDailyChallengeRequest) returns (actions.OpenDailyChallengeResponse);
 	rpc CloseDailyChallenge (actions.CloseDailyChallengeRequest) returns (actions.CloseDailyChallengeResponse);
 	rpc SetMarketDay (actions.SetMarketDayRequest) returns (actions.SetMarketDayResponse);
+	rpc InspectUserDegree(actions.InspectDegreeRequest)				returns (actions.InspectDegreeResponse);
+	rpc InspectConnectedComponents(actions.InspectComponentsRequest) returns (actions.InspectComponentsResponse);
 }
 
 service DalalStreamService {
