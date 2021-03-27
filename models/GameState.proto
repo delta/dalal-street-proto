@@ -35,6 +35,7 @@ message StockBankruptState {
 
 message UserBlockState{
     bool is_blocked = 1;
+    uint64 cash = 2;
 }
 
 message UserReferredCredit{
