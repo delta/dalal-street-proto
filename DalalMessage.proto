@@ -25,7 +25,7 @@ import "actions/CloseDailyChallenge.proto";
 import "actions/SetMarketDay.proto";
 import "actions/InspectDegree.proto";
 import "actions/InspectComponents.proto";
-import "/actions/ResendVerificationEmail.proto";
+import "actions/ResendVerificationEmail.proto";
 
 import "actions/GetPortfolio.proto";
 import "actions/CreateBot.proto";
