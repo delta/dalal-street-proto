@@ -25,6 +25,7 @@ import "actions/CloseDailyChallenge.proto";
 import "actions/SetMarketDay.proto";
 import "actions/InspectDegree.proto";
 import "actions/InspectComponents.proto";
+import "/actions/ResendVerificationEmail.proto";
 
 import "actions/GetPortfolio.proto";
 import "actions/CreateBot.proto";
@@ -182,6 +183,7 @@ service DalalActionService {
 	rpc VerifyPhone(actions.VerifyOTPRequest)							returns (actions.VerifyOTPResponse);
 	rpc GetReferralCode(actions.GetReferralCodeRequest)		            returns (actions.GetReferralCodeResponse);
 	rpc AddUserSubscription(actions.AddUserSubscriptionRequest)             returns (actions.AddUserSubscriptionResponse);  
+	rpc ResendVerificationEmai(actions.ResendVerificationEmailRequest)				returns (actions. ResendVerificationEmailResponse);
 
 	//Bots
 	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
