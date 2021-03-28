@@ -183,7 +183,7 @@ service DalalActionService {
 	rpc VerifyPhone(actions.VerifyOTPRequest)							returns (actions.VerifyOTPResponse);
 	rpc GetReferralCode(actions.GetReferralCodeRequest)		            returns (actions.GetReferralCodeResponse);
 	rpc AddUserSubscription(actions.AddUserSubscriptionRequest)             returns (actions.AddUserSubscriptionResponse);  
-	rpc ResendVerificationEmai(actions.ResendVerificationEmailRequest)				returns (actions. ResendVerificationEmailResponse);
+	rpc ResendVerificationEmail(actions.ResendVerificationEmailRequest)				returns (actions. ResendVerificationEmailResponse);
 
 	//Bots
 	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
