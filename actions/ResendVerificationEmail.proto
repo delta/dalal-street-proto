@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package dalalstreet.api.actions;
+
+option java_multiple_files=true;
+
+message ResendVerificationEmailRequest {
+    string email = 1;
+
+}
+message ResendVerificationEmailResponse {
+    enum StatusCode {
+        OK = 0;
+        InvalidUserError = 1;
+        MaxEmailResendCountReached = 2;
+        InternalServerError = 3;
+    }
+    StatusCode status_code = 1;
+    string     status_message = 2;
+
+}
