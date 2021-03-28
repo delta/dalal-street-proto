@@ -3,6 +3,7 @@ package dalalstreet.api.actions;
 
 message BlockUserRequest {
     uint32 user_id = 1;
+    uint64 penalty = 2;
 }
 
 message BlockUserResponse {
