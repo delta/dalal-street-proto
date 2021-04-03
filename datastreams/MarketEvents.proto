@@ -8,4 +8,5 @@ import "models/MarketEvent.proto";
 
 message MarketEventUpdate {
     models.MarketEvent market_event = 1;
+    string news_base_path = 2;
 }

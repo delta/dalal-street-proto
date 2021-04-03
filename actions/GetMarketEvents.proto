@@ -20,4 +20,5 @@ message GetMarketEventsResponse {
 
     bool more_exists = 3;
     repeated models.MarketEvent market_events = 4;
+    string news_base_path = 5;
 }
