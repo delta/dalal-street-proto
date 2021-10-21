@@ -2,6 +2,7 @@ syntax = "proto3";
 package dalalstreet.api.actions;
 
 import "models/DailyChallenge.proto";
+option go_package = "github.com/delta/dalal-street-server/proto_build/actions"; 
 
 message GetDailyChallengesRequest {
     uint32 market_day = 1;

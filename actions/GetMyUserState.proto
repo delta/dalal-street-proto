@@ -2,6 +2,7 @@ syntax = "proto3";
 package dalalstreet.api.actions;
 
 import "models/UserState.proto";
+option go_package = "github.com/delta/dalal-street-server/proto_build/actions"; 
 
 message GetMyUserStateRequest {
     uint32 challenge_id = 1;
