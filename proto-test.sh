@@ -22,4 +22,3 @@ protoc -I=. --go_out=proto_build --go_opt=paths=source_relative datastreams/*.pr
 cd proto_build/
 grep -rl "proto_build" . | grep -v ".sh" | xargs sed -r -i 's|github.com/delta/dalal-street-proto/proto_build/(google\|golang\|github)|\1|g'
 find -type f -name "*.proto" -exec rm {} \;
-go build
