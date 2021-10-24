@@ -3,6 +3,7 @@ syntax = "proto3";
 package dalalstreet.api.datastreams;
 
 option java_multiple_files=true;
+option go_package = "github.com/delta/dalal-street-server/proto_build/datastreams";
 
 message StockPricesUpdate {
     map<uint32, uint64> prices = 1; // key: stockId, value: price

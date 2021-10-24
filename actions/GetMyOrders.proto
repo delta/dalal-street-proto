@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package dalalstreet.api.actions;
+option go_package = "github.com/delta/dalal-street-server/proto_build/actions"; 
 
 option java_multiple_files=true;
 

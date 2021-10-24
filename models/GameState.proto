@@ -3,6 +3,7 @@ syntax = "proto3";
 package dalalstreet.api.models;
 
 option java_multiple_files=true;
+option go_package = "github.com/delta/dalal-street-server/proto_build/models";
 
 enum GameStateUpdateType {
     MarketStateUpdate = 0;

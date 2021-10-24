@@ -1,6 +1,8 @@
 syntax = "proto3";
 
 package dalalstreet.api;
+option go_package = "github.com/delta/dalal-street-server/proto_build";	 
+
 
 import "actions/BuyStocksFromExchange.proto";
 import "actions/CancelOrder.proto";

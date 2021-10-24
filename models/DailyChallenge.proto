@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package dalalstreet.api.models;
+option go_package = "github.com/delta/dalal-street-server/proto_build/models";
 
 message DailyChallenge {
     uint32 challenge_id = 1;
