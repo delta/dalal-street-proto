@@ -57,6 +57,7 @@ import "actions/GetMyUserState.proto";
 import "actions/GetMyReward.proto";
 import "actions/GetDailyChallengeConfig.proto";
 import "actions/AddUserSubscription.proto";
+import "actions/GetStockList.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -95,6 +96,7 @@ service DalalActionService {
 	rpc GetStockHistory(actions.GetStockHistoryRequest)						returns (actions.GetStockHistoryResponse);
 	rpc GetDailyChallenges (actions.GetDailyChallengesRequest)          returns (actions.GetDailyChallengesResponse);
 	rpc GetDailyChallengeConfig (actions.GetDailyChallengeConfigRequest) returns (actions.GetDailyChallengeConfigResponse);
+	rpc GetStockList (actions.GetStockListRequest) returns (actions.GetStockListResponse);
 	
 	// Auth
 	rpc Login(actions.LoginRequest) 									returns (actions.LoginResponse);
