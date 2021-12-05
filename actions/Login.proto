@@ -27,7 +27,5 @@ message LoginResponse {
     map<string, int32>  constants = 5;
     bool                is_market_open = 6;
 
-    string  market_is_open_hacky_notif = 7;
-    string  market_is_closed_hacky_notif = 8;
-    string  vapid_public_key  = 9;
+    string  vapid_public_key  = 7;
 }

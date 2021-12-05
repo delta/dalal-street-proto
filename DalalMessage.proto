@@ -86,7 +86,8 @@ service DalalActionService {
 	rpc GetMortgageDetails(actions.GetMortgageDetailsRequest) 			returns (actions.GetMortgageDetailsResponse);
 	rpc GetMyUserState (actions.GetMyUserStateRequest) returns (actions.GetMyUserStateResponse);
 	rpc GetMyReward (actions.GetMyRewardRequest) returns (actions.GetMyRewardResponse);
-
+	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
+	
 	// Getting general information
 	rpc GetCompanyProfile(actions.GetCompanyProfileRequest)				returns (actions.GetCompanyProfileResponse);
 	rpc GetLeaderboard(actions.GetLeaderboardRequest)					returns (actions.GetLeaderboardResponse);
@@ -111,7 +112,6 @@ service DalalActionService {
 	rpc ResendVerificationEmail(actions.ResendVerificationEmailRequest)				returns (actions.ResendVerificationEmailResponse);
 
 	//Bots
-	rpc GetPortfolio(actions.GetPortfolioRequest)						returns (actions.GetPortfolioResponse);
 	rpc CreateBot(actions.CreateBotRequest)								returns (actions.CreateBotResponse);
 
 	//Admin
