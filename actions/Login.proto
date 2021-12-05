@@ -5,7 +5,6 @@ package dalalstreet.api.actions;
 option java_multiple_files=true;
 option go_package = "github.com/delta/dalal-street-server/proto_build/actions"; 
 
-import "models/Stock.proto";
 import "models/User.proto";
 
 message LoginRequest {
@@ -25,13 +24,8 @@ message LoginResponse {
     string      session_id = 3;
     models.User user = 4;
 
-    map<uint32, int64>          stocks_owned = 5;
-    map<uint32, models.Stock>   stock_list = 6;
-    map<string, int32>          constants = 7;
+    map<string, int32>  constants = 5;
+    bool                is_market_open = 6;
 
-    string  market_is_open_hacky_notif = 8;
-    string  market_is_closed_hacky_notif = 9;
-    string vapid_public_key  = 10;
-    bool    is_market_open = 11;
-    map<uint32, int64>          reserved_stocks_owned = 12;
+    string  vapid_public_key  = 7;
 }
