@@ -21,6 +21,7 @@ import "actions/LoadStocks.proto";
 import "actions/AddStocksToExchange.proto";
 import "actions/UpdateStockPrice.proto";
 import "actions/AddMarketEvent.proto";
+import "actions/UpdateMarketEvent.proto";
 import "actions/AddDailyChallenge.proto";
 import "actions/OpenDailyChallenge.proto";
 import "actions/CloseDailyChallenge.proto";
@@ -125,6 +126,7 @@ service DalalActionService {
 	rpc AddStocksToExchange(actions.AddStocksToExchangeRequest) returns (actions.AddStocksToExchangeResponse);
 	rpc UpdateStockPrice(actions.UpdateStockPriceRequest) returns (actions.UpdateStockPriceResponse);
 	rpc AddMarketEvent(actions.AddMarketEventRequest) returns (actions.AddMarketEventResponse);
+	rpc UpdateMarketEvent(actions.UpdateMarketEventRequest) returns (actions.UpdateMarketEventResponse);
 	rpc SetGivesDividends(actions.SetGivesDividendsRequest)     		returns (actions.SetGivesDividendsResponse);
     rpc SetBankruptcy(actions.SetBankruptcyRequest)     				returns (actions.SetBankruptcyResponse);
 	rpc InspectUser(actions.InspectUserRequest)     				returns (actions.InspectUserResponse);
