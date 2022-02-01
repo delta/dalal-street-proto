@@ -22,4 +22,5 @@ message GetPortfolioResponse {
     models.User user = 4;
     map<uint32, int64>          stocks_owned = 5;
     map<uint32, int64>          reserved_stocks_owned = 6;
+    map<uint32, int64>          cash_spent = 7;
 }
