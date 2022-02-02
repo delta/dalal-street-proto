@@ -14,5 +14,4 @@ message MarketEvent {
     bool   is_global = 7;
     string created_at = 6;
     string image_path = 8;
-    uint32 old_news_id = 9;
 }
