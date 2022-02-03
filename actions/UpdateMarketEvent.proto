@@ -1,0 +1,23 @@
+syntax = "proto3";
+package dalalstreet.api.actions;
+option go_package = "github.com/delta/dalal-street-server/proto_build/actions"; 
+
+
+message UpdateMarketEventRequest {
+    uint32 stock_id = 1;
+    string headline = 2;
+    string text = 3;
+    string image_url = 4;
+    bool is_global = 5;
+    uint32 old_news_id = 6;
+}
+
+message UpdateMarketEventResponse {
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+        NotAdminUserError = 2;
+    }
+    StatusCode status_code = 1;
+    string     status_message = 2;
+}
