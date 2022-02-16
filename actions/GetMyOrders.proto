@@ -7,6 +7,7 @@ option java_multiple_files=true;
 
 import "models/Ask.proto";
 import "models/Bid.proto";
+import "models/IpoBid.proto";
 
 message GetMyOpenOrdersRequest {
     // No request data for GetMyOpenOrders
@@ -57,4 +58,20 @@ message GetMyClosedBidsResponse {
 
     bool                more_exists = 3;
     repeated models.Bid closed_bid_orders = 4;
+}
+
+
+message GetMyIpoOrdersRequest {
+    // No request data for GetMyIpoOrders
+}
+message GetMyIpoOrdersResponse {
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+    }
+    StatusCode status_code = 1;
+    string     status_message = 2;
+
+    bool                more_exists = 3;
+    repeated models.IpoBid ipo_orders = 4;
 }

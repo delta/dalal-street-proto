@@ -60,6 +60,8 @@ import "actions/GetMyReward.proto";
 import "actions/GetDailyChallengeConfig.proto";
 import "actions/AddUserSubscription.proto";
 import "actions/GetStockList.proto";
+import "actions/PlaceIpoOrder.proto";
+import "actions/AddIpoStocks.proto";
 
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
@@ -141,6 +143,8 @@ service DalalActionService {
 	rpc InspectUserDegree(actions.InspectDegreeRequest)				returns (actions.InspectDegreeResponse);
 	rpc InspectConnectedComponents(actions.InspectComponentsRequest) returns (actions.InspectComponentsResponse);
 	rpc SquareOffShortSells(actions.SquareOffShortSellRequest) returns (actions.SquareOffShortSellResponse);
+	rpc PlaceIpoOrder(actions.PlaceIpoOrderRequest)				returns (actions.PlaceIpoOrderResponse);
+	rpc AddIpoStocks(actions.AddIpoStocksToExchangeRequest)			returns (actions.AddIpoStocksToExchangeResponse);
 }
 
 service DalalStreamService {
