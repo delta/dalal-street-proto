@@ -10,6 +10,7 @@ message IpoStock {
   string short_name = 2;
   string full_name = 3;
   string description = 4;
+<<<<<<< HEAD
   uint64 slot_price = 5;    
   uint64 stock_price = 6; 
   uint32 slot_quantity = 7;
@@ -17,4 +18,12 @@ message IpoStock {
   string created_at = 9;
   string updated_at = 10;
   bool is_biddable = 11;
+=======
+  uint64 SlotPrice = 5;    
+  uint64 StockPrice = 6; 
+  uint32 SlotQuantity = 7;
+  string created_at = 8;
+  string updated_at = 9;
+  bool gives_dividends = 10;
+>>>>>>> IPO Feature - proto for bid/order and add stock
 }

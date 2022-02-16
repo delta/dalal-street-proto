@@ -9,7 +9,11 @@ option go_package = "github.com/delta/dalal-street-server/proto_build/models";
 message IpoBid {
   uint32 id = 1;
   uint32 user_id = 2;
+<<<<<<< HEAD
   uint32 ipo_stock_id = 3;
+=======
+  uint32 stock_id = 3;
+>>>>>>> IPO Feature - proto for bid/order and add stock
   uint64 slot_price = 4;
   uint32 slot_quantity = 5;
   bool is_fulfilled = 6;

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package dalalstreet.api.actions;
+
+option java_multiple_files=true;
+option go_package = "github.com/delta/dalal-street-server/proto_build/actions"; 
+
+
+message CancelOrderRequest {
+    uint32 order_id = 1;
+}
+message CancelOrderResponse {
+    enum StatusCode {
+        OK = 0;
+        InternalServerError = 1;
+        MarketClosedError = 2;
+        InvalidOrderId = 3;
+        UserNotPhoneVerfiedError = 4;
+        UserBlockedError = 5;
+        AlreadyCancelledError = 6;
+    }
+    StatusCode status_code = 1;
+    string status_message = 2;
+}
