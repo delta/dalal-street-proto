@@ -29,6 +29,7 @@ import "actions/SetMarketDay.proto";
 import "actions/InspectDegree.proto";
 import "actions/InspectComponents.proto";
 import "actions/ResendVerificationEmail.proto";
+import "actions/SquareOffShortSell.proto";
 
 import "actions/GetPortfolio.proto";
 import "actions/CreateBot.proto";
@@ -139,6 +140,7 @@ service DalalActionService {
 	rpc SetMarketDay (actions.SetMarketDayRequest) returns (actions.SetMarketDayResponse);
 	rpc InspectUserDegree(actions.InspectDegreeRequest)				returns (actions.InspectDegreeResponse);
 	rpc InspectConnectedComponents(actions.InspectComponentsRequest) returns (actions.InspectComponentsResponse);
+	rpc SquareOffShortSells(actions.SquareOffShortSellRequest) returns (actions.SquareOffShortSellResponse);
 }
 
 service DalalStreamService {
