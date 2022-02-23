@@ -60,10 +60,14 @@ import "actions/GetMyReward.proto";
 import "actions/GetDailyChallengeConfig.proto";
 import "actions/AddUserSubscription.proto";
 import "actions/GetStockList.proto";
-import "actions/PlaceIpoOrder.proto";
-import "actions/CancelIpoOrder.proto";
-import "actions/AddIpoStocks.proto";
 
+import "actions/PlaceIpoBid.proto";
+import "actions/CancelIpoBid.proto";
+import "actions/OpenIpoBidding.proto";
+import "actions/CloseIpoBidding.proto";
+import "actions/GetIpoStockList.proto";
+
+// GetMyIpoBidsRequest
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
 import "datastreams/Transactions.proto";
@@ -82,13 +86,14 @@ service DalalActionService {
 	rpc CancelOrder(actions.CancelOrderRequest) 						returns (actions.CancelOrderResponse);
 	rpc MortgageStocks(actions.MortgageStocksRequest) 					returns (actions.MortgageStocksResponse);
 	rpc RetrieveMortgageStocks(actions.RetrieveMortgageStocksRequest) 	returns (actions.RetrieveMortgageStocksResponse);
-	rpc PlaceIpoOrder(actions.PlaceIpoOrderRequest)				returns (actions.PlaceIpoOrderResponse);
-	rpc CancelIpoOrder(actions.CancelIpoOrderRequest) 						returns (actions.CancelIpoOrderResponse);
+	rpc PlaceIpoOrder(actions.PlaceIpoBidRequest)				returns (actions.PlaceIpoBidResponse);
+	rpc CancelIpoOrder(actions.CancelIpoBidRequest) 						returns (actions.CancelIpoBidResponse);
 	
 	// Getting information about transactions, orders, mortgage
 	rpc GetMyOpenOrders(actions.GetMyOpenOrdersRequest)					returns (actions.GetMyOpenOrdersResponse);
 	rpc GetMyClosedAsks(actions.GetMyClosedAsksRequest)					returns (actions.GetMyClosedAsksResponse);
 	rpc GetMyClosedBids(actions.GetMyClosedBidsRequest)					returns (actions.GetMyClosedBidsResponse);
+	rpc GetMyIpoBids(actions.GetMyIpoBidsRequest)					returns (actions.GetMyIpoBidsResponse);
 	rpc GetTransactions(actions.GetTransactionsRequest)   				returns (actions.GetTransactionsResponse);
 	rpc GetMortgageDetails(actions.GetMortgageDetailsRequest) 			returns (actions.GetMortgageDetailsResponse);
 	rpc GetMyUserState (actions.GetMyUserStateRequest) returns (actions.GetMyUserStateResponse);
@@ -105,6 +110,7 @@ service DalalActionService {
 	rpc GetDailyChallenges (actions.GetDailyChallengesRequest)          returns (actions.GetDailyChallengesResponse);
 	rpc GetDailyChallengeConfig (actions.GetDailyChallengeConfigRequest) returns (actions.GetDailyChallengeConfigResponse);
 	rpc GetStockList (actions.GetStockListRequest) returns (actions.GetStockListResponse);
+	rpc GetIpoStockList (actions.GetIpoStockListRequest) returns (actions.GetIpoStockListResponse);
 	
 	// Auth
 	rpc Login(actions.LoginRequest) 									returns (actions.LoginResponse);
@@ -149,6 +155,8 @@ service DalalActionService {
 	rpc PlaceIpoOrder(actions.PlaceIpoOrderRequest)				returns (actions.PlaceIpoOrderResponse);
 	rpc AddIpoStocks(actions.AddIpoStocksToExchangeRequest)			returns (actions.AddIpoStocksToExchangeResponse);
 	// rpc AddIpoStocks(actions.AddIpoStocksToExchangeRequest)			returns (actions.AddIpoStocksToExchangeResponse);
+	rpc OpenIpoBidding (actions.OpenIpoBiddingRequest) returns (actions.OpenIpoBiddingResponse);
+	rpc CloseIpoBidding (actions.CloseIpoBiddingRequest) returns (actions.CloseIpoBiddingResponse);
 }
 
 service DalalStreamService {

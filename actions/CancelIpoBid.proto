@@ -5,15 +5,15 @@ option java_multiple_files=true;
 option go_package = "github.com/delta/dalal-street-server/proto_build/actions"; 
 
 
-message CancelIpoOrderRequest {
-    uint32 order_id = 1;
+message CancelIpoBidRequest {
+    uint32 ipo_bid_id = 1;
 }
-message CancelIpoOrderResponse {
+message CancelIpoBidResponse {
     enum StatusCode {
         OK = 0;
         InternalServerError = 1;
         MarketClosedError = 2;
-        InvalidOrderId = 3;
+        InvalidBidId = 3;
         UserNotPhoneVerfiedError = 4;
         UserBlockedError = 5;
         AlreadyCancelledError = 6;

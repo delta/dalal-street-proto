@@ -61,10 +61,9 @@ message GetMyClosedBidsResponse {
 }
 
 
-message GetMyIpoOrdersRequest {
-    // No request data for GetMyIpoOrders
+message GetMyIpoBidsRequest {
 }
-message GetMyIpoOrdersResponse {
+message GetMyIpoBidsResponse {
     enum StatusCode {
         OK = 0;
         InternalServerError = 1;
@@ -73,5 +72,5 @@ message GetMyIpoOrdersResponse {
     string     status_message = 2;
 
     bool                more_exists = 3;
-    repeated models.IpoBid ipo_orders = 4;
+    repeated models.IpoBid ipo_bids = 4;
 }
