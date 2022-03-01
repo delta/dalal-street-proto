@@ -67,7 +67,6 @@ import "actions/OpenIpoBidding.proto";
 import "actions/CloseIpoBidding.proto";
 import "actions/GetIpoStockList.proto";
 
-// GetMyIpoBidsRequest
 import "datastreams/Subscribe.proto";
 import "datastreams/MarketDepth.proto";
 import "datastreams/Transactions.proto";
@@ -86,8 +85,8 @@ service DalalActionService {
 	rpc CancelOrder(actions.CancelOrderRequest) 						returns (actions.CancelOrderResponse);
 	rpc MortgageStocks(actions.MortgageStocksRequest) 					returns (actions.MortgageStocksResponse);
 	rpc RetrieveMortgageStocks(actions.RetrieveMortgageStocksRequest) 	returns (actions.RetrieveMortgageStocksResponse);
-	rpc PlaceIpoOrder(actions.PlaceIpoBidRequest)				returns (actions.PlaceIpoBidResponse);
-	rpc CancelIpoOrder(actions.CancelIpoBidRequest) 						returns (actions.CancelIpoBidResponse);
+	rpc PlaceIpoBid(actions.PlaceIpoBidRequest)				returns (actions.PlaceIpoBidResponse);
+	rpc CancelIpoBid(actions.CancelIpoBidRequest) 						returns (actions.CancelIpoBidResponse);
 	
 	// Getting information about transactions, orders, mortgage
 	rpc GetMyOpenOrders(actions.GetMyOpenOrdersRequest)					returns (actions.GetMyOpenOrdersResponse);

@@ -13,7 +13,9 @@ message IpoStock {
   uint64 SlotPrice = 5;    
   uint64 StockPrice = 6; 
   uint32 SlotQuantity = 7;
-  string created_at = 8;
-  string updated_at = 9;
-  bool gives_dividends = 10;
+  uint32 StocksPerSlot = 8;
+  string created_at = 9;
+  string updated_at = 10;
+  bool is_biddable = 11;
+  bool gives_dividends = 12;
 }

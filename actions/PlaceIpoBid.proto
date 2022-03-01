@@ -6,7 +6,8 @@ option go_package = "github.com/delta/dalal-street-server/proto_build/actions";
 
 message PlaceIpoBidRequest {
     uint32 stock_id = 1;
-    uint64 slot_quantity = 2;
+    uint32 slot_quantity = 2;
+    uint64 slot_price = 3;
 }
 
 message PlaceIpoBidResponse {
@@ -14,7 +15,7 @@ message PlaceIpoBidResponse {
         OK = 0;
         InternalServerError = 1;
         MarketClosedError = 2;
-        SlotQuantityLimitExceeded = 3; // when slot_quantity in request >= Max allowed
+        SlotQuantityLimitExceededError = 3; // when slot_quantity in request >= Max allowed
         NotEnoughCashError = 4; // when the user does not have enough cash to buy
         UserNotPhoneVerfiedError = 5;
         UserBlockedError = 6;
