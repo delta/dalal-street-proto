@@ -15,6 +15,7 @@ enum TransactionType {
     PLACE_ORDER_TRANSACTION = 6;
     CANCEL_ORDER_TRANSACTION = 7;
     RESERVE_UPDATE_TRANSACTION = 8;
+    SHORT_SELL_TRANSACTION = 9;
 }
 
 message Transaction {
