@@ -151,9 +151,6 @@ service DalalActionService {
 	rpc InspectUserDegree(actions.InspectDegreeRequest)				returns (actions.InspectDegreeResponse);
 	rpc InspectConnectedComponents(actions.InspectComponentsRequest) returns (actions.InspectComponentsResponse);
 	rpc SquareOffShortSells(actions.SquareOffShortSellRequest) returns (actions.SquareOffShortSellResponse);
-	rpc PlaceIpoOrder(actions.PlaceIpoOrderRequest)				returns (actions.PlaceIpoOrderResponse);
-	rpc AddIpoStocks(actions.AddIpoStocksToExchangeRequest)			returns (actions.AddIpoStocksToExchangeResponse);
-	// rpc AddIpoStocks(actions.AddIpoStocksToExchangeRequest)			returns (actions.AddIpoStocksToExchangeResponse);
 	rpc OpenIpoBidding (actions.OpenIpoBiddingRequest) returns (actions.OpenIpoBiddingResponse);
 	rpc CloseIpoBidding (actions.CloseIpoBiddingRequest) returns (actions.CloseIpoBiddingResponse);
 }

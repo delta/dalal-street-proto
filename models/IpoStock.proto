@@ -10,8 +10,8 @@ message IpoStock {
   string short_name = 2;
   string full_name = 3;
   string description = 4;
-  uint64 slot_price = 5;    
-  uint64 stock_price = 6; 
+  uint64 slot_price = 5;
+  uint64 stock_price = 6;
   uint32 slot_quantity = 7;
   uint32 stocks_per_slot = 8;
   string created_at = 9;
