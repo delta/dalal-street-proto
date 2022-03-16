@@ -7,7 +7,6 @@ option go_package = "github.com/delta/dalal-street-server/proto_build/actions";
 message PlaceIpoBidRequest {
     uint32 stock_id = 1;
     uint32 slot_quantity = 2;
-    uint64 slot_price = 3;
 }
 
 message PlaceIpoBidResponse {
