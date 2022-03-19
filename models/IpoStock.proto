@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package dalalstreet.api.models;
+
+option java_multiple_files=true;
+option go_package = "github.com/delta/dalal-street-server/proto_build/models";
+
+message IpoStock {
+  uint32 id = 1;
+  string short_name = 2;
+  string full_name = 3;
+  string description = 4;
+  uint64 slot_price = 5;
+  uint64 stock_price = 6;
+  uint32 slot_quantity = 7;
+  uint32 stocks_per_slot = 8;
+  string created_at = 9;
+  string updated_at = 10;
+  bool is_biddable = 11;
+}
